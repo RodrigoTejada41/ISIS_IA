@@ -13,6 +13,11 @@ from urllib.parse import parse_qs, quote, urlparse
 from aurora.core.assistant import IsisAssistantCore
 from aurora.core.conversations import ConversationStore, StoredMessage
 from aurora.core.runtime import AuroraRuntime
+from aurora.internet.internet_manager import InternetManager
+from aurora.permissions.permission_engine import ActionContext, PermissionEngine
+from aurora.permissions.profile_manager import PermissionProfileManager
+from aurora.permissions.rule_activation import RuleActivationService
+from aurora.permissions.rule_parser import RuleParser
 from aurora.ui.hud_dashboard import build_hud_snapshot, hud_response_text, speech_excerpt
 from aurora.voice.factory import build_voice_session
 from aurora.voice.tts.piper_engine import AudioCache
@@ -207,6 +212,8 @@ button,input {{ font:inherit; }}
 .task span {{ color:var(--teal); font-weight:750; white-space:nowrap; }}
 .choice {{ width:100%; margin-top:10px; padding:12px; border-radius:8px; color:var(--white); background:rgba(3,12,18,.72); text-align:left; cursor:pointer; }}
 .choice:hover {{ border-color:var(--cyan); background:rgba(37,230,255,.10); }}
+textarea.rules {{ width:100%; min-height:150px; resize:vertical; margin-top:10px; padding:12px; color:var(--white); background:rgba(3,12,18,.78); border:1px solid rgba(37,230,255,.28); border-radius:7px; }}
+pre.output {{ white-space:pre-wrap; color:var(--muted); font-size:12px; line-height:1.45; max-height:240px; overflow:auto; }}
 .avatar {{ height:260px; display:grid; place-items:center; position:relative; }}
 .core {{ position:relative; width:178px; height:178px; border:1px solid var(--cyan); border-radius:50%; display:grid; place-items:center; text-align:center; color:var(--white); background:radial-gradient(circle, #dfffff 0 3%, #52efff 8%, rgba(0,101,180,.48) 32%, rgba(0,0,0,.1) 66%); box-shadow:0 0 54px rgba(37,230,255,.32); animation:pulse 2.8s infinite; }}
 .core:before,.core:after {{ content:""; position:absolute; inset:-24px; border-radius:50%; border:1px solid rgba(37,230,255,.48); border-left-color:transparent; border-right-color:rgba(217,173,82,.55); animation:spin 12s linear infinite; }}
@@ -252,6 +259,7 @@ input {{ flex:1; min-width:0; background:rgba(3,10,16,.92); border:1px solid rgb
       <button data-panel="projetos">Projetos</button>
       <button data-panel="documentos">Documentos</button>
       <button data-panel="automacoes">Automacoes</button>
+      <button data-panel="internet">Internet</button>
       <button data-panel="agenda">Agenda</button>
       <button data-panel="configuracoes">Configuracoes</button>
       <div class="mini-title">Projetos recentes</div>
@@ -289,6 +297,22 @@ input {{ flex:1; min-width:0; background:rgba(3,10,16,.92); border:1px solid rgb
           <div class="task"><div><b>Execucao real protegida</b><p>Automacao real continua bloqueada por politica; simulacao e auditoria estao disponiveis.</p></div><span>SEGURO</span></div>
           <button class="choice" data-command="mostre o status das permissoes de automacao">Status das permissoes</button>
           <button class="choice" data-command="planeje uma automacao segura de tela">Planejar automacao segura</button>
+        </div>
+        <div id="internet" class="panel">
+          <div class="modules">
+            <section class="module"><h3>Internet</h3><p id="internetInfo">Modo: {snapshot.get("internet_mode", "controlled")} | Provedor: {snapshot.get("internet_provider", "duckduckgo_html")}</p></section>
+            <section class="module"><h3>Permissoes</h3><p id="permissionInfo">Perfil: {snapshot.get("permission_profile", "")} | Downloads exigem confirmacao.</p></section>
+            <section class="module"><h3>Acoes</h3><button class="choice" id="internetStatus" type="button">Status</button><button class="choice" id="internetTest" type="button">Testar conexao</button><button class="choice" id="clearResearchCache" type="button">Limpar cache</button></section>
+            <section class="module"><h3>Seguranca</h3><button class="choice" id="permissionSummary" type="button">Resumo atual</button><button class="choice" id="emergencyBlock" type="button">BLOQUEAR ACESSOS</button></section>
+          </div>
+          <div class="task"><div><b>Pesquisa rapida</b><p>Consulta publica com politicas de dominio, SSRF, cache e historico.</p></div><span>WEB</span></div>
+          <textarea class="rules" id="researchQuery" placeholder="Digite a pesquisa aqui"></textarea>
+          <button class="choice" id="runResearch" type="button">Pesquisar</button>
+          <div class="task"><div><b>Regras personalizadas da ISIS</b><p>Texto livre e convertido em estrutura validada antes de ativar.</p></div><span>RULES</span></div>
+          <textarea class="rules" id="ruleText" placeholder="Ex: A ISIS pode acessar GitHub por uma hora, mas nao pode baixar executaveis."></textarea>
+          <button class="choice" id="analyzeRules" type="button">Analisar regras</button>
+          <button class="choice" id="activateRules" type="button">Ativar regra analisada</button>
+          <pre class="output" id="internetOutput"></pre>
         </div>
         <div id="agenda" class="panel">
           <div class="task"><div><b>Agenda local</b><p>Nao ha conector de calendario ativo neste projeto.</p></div><span>OFFLINE</span></div>
@@ -534,6 +558,67 @@ document.getElementById("clearVoiceCache").onclick = async () => {{
   const data = await res.json();
   setStatus(data.ok ? `Cache de voz limpo: ${{data.removed}} arquivos` : (data.error || "Falha ao limpar cache"));
 }};
+const internetOutput = document.getElementById("internetOutput");
+function showInternet(data) {{
+  internetOutput.textContent = JSON.stringify(data, null, 2);
+}}
+document.getElementById("internetStatus").onclick = async () => {{
+  const res = await fetch("/api/internet-status");
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok === false ? "Falha no status de Internet" : "Status de Internet atualizado");
+}};
+document.getElementById("internetTest").onclick = async () => {{
+  const res = await fetch("/api/internet-test", {{ method:"POST" }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? "Conexao online" : (data.error || "Internet bloqueada"));
+}};
+document.getElementById("runResearch").onclick = async () => {{
+  const query = document.getElementById("researchQuery").value.trim();
+  if (!query) return;
+  setStatus("Pesquisando na Internet");
+  const res = await fetch("/api/internet-search", {{ method:"POST", headers:{{"content-type":"application/json"}}, body:JSON.stringify({{query, mode:"quick"}}) }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? "Pesquisa concluida" : (data.status || data.error || "Pesquisa bloqueada"));
+}};
+document.getElementById("clearResearchCache").onclick = async () => {{
+  const res = await fetch("/api/internet-cache-clear", {{ method:"POST" }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? `Cache de pesquisa limpo: ${{data.removed}} arquivos` : "Falha ao limpar cache");
+}};
+document.getElementById("permissionSummary").onclick = async () => {{
+  const res = await fetch("/api/permission-summary");
+  const data = await res.json();
+  showInternet(data);
+  setStatus("Resumo de permissoes atualizado");
+}};
+document.getElementById("analyzeRules").onclick = async () => {{
+  const text = document.getElementById("ruleText").value.trim();
+  if (!text) return;
+  const res = await fetch("/api/rules-parse", {{ method:"POST", headers:{{"content-type":"application/json"}}, body:JSON.stringify({{text}}) }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? "Regras analisadas; revise antes de ativar" : "Falha ao analisar regras");
+}};
+document.getElementById("activateRules").onclick = async () => {{
+  const text = document.getElementById("ruleText").value.trim();
+  if (!text) return;
+  if (!confirm("Ativar esta regra estruturada agora?")) return;
+  const res = await fetch("/api/rules-apply", {{ method:"POST", headers:{{"content-type":"application/json"}}, body:JSON.stringify({{text, confirmed:true}}) }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? "Regra ativada e versionada" : (data.status || "Regra nao ativada"));
+}};
+document.getElementById("emergencyBlock").onclick = async () => {{
+  if (!confirm("Bloquear Internet, pesquisas e autorizacoes temporarias agora?")) return;
+  const res = await fetch("/api/permission-emergency-block", {{ method:"POST" }});
+  const data = await res.json();
+  showInternet(data);
+  setStatus(data.ok ? "Acessos externos bloqueados" : "Falha no bloqueio");
+}};
 document.getElementById("mic").onclick = () => {{
   if (!recognition && !setupMic()) {{ setStatus("Microfone do navegador indisponivel"); return; }}
   if (listening) recognition.stop();
@@ -629,6 +714,12 @@ class HudWebServer:
                 if parsed.path == "/api/voice-status":
                     self._voice_status()
                     return
+                if parsed.path == "/api/internet-status":
+                    self._internet_status()
+                    return
+                if parsed.path == "/api/permission-summary":
+                    self._permission_summary()
+                    return
                 if parsed.path == "/api/conversations":
                     self._send_json({"ok": True, "conversations": state.store.list_conversations()})
                     return
@@ -655,6 +746,24 @@ class HudWebServer:
                     return
                 if self.path == "/api/voice-cache-clear":
                     self._voice_cache_clear()
+                    return
+                if self.path == "/api/internet-test":
+                    self._internet_test()
+                    return
+                if self.path == "/api/internet-search":
+                    self._internet_search()
+                    return
+                if self.path == "/api/internet-cache-clear":
+                    self._internet_cache_clear()
+                    return
+                if self.path == "/api/rules-parse":
+                    self._rules_parse()
+                    return
+                if self.path == "/api/rules-apply":
+                    self._rules_apply()
+                    return
+                if self.path == "/api/permission-emergency-block":
+                    self._permission_emergency_block()
                     return
                 if self.path == "/api/projects":
                     self._create_project()
@@ -730,6 +839,68 @@ class HudWebServer:
                 except Exception as exc:
                     self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
 
+            def _internet_status(self) -> None:
+                try:
+                    self._send_json({"ok": True, **InternetManager(state.runtime.config, Path(state.runtime.config.paths.isis_root)).status()})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _internet_test(self) -> None:
+                try:
+                    self._send_json(InternetManager(state.runtime.config, Path(state.runtime.config.paths.isis_root)).test_connection())
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _internet_search(self) -> None:
+                try:
+                    data = self._read_json()
+                    result = InternetManager(state.runtime.config, Path(state.runtime.config.paths.isis_root)).agent.research(
+                        str(data.get("query") or ""),
+                        mode=str(data.get("mode") or "quick"),
+                        confirmed=bool(data.get("confirmed", False)),
+                    )
+                    self._send_json(result)
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _internet_cache_clear(self) -> None:
+                try:
+                    manager = InternetManager(state.runtime.config, Path(state.runtime.config.paths.isis_root))
+                    self._send_json({"ok": True, "removed": manager.agent.cache.clear()})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _rules_parse(self) -> None:
+                try:
+                    parsed = RuleParser().parse(str(self._read_json().get("text") or ""))
+                    self._send_json({"ok": True, **asdict(parsed)})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _rules_apply(self) -> None:
+                try:
+                    data = self._read_json()
+                    service = RuleActivationService(state.runtime.config, state.runtime.config_store, Path(state.runtime.config.paths.isis_root) / "config" / "permissions")
+                    self._send_json(service.apply_text(str(data.get("text") or ""), confirmed=bool(data.get("confirmed", False))))
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _permission_summary(self) -> None:
+                try:
+                    engine = PermissionEngine(state.runtime.config, Path(state.runtime.config.paths.isis_root) / "config" / "permissions")
+                    self._send_json({"ok": True, **engine.summary()})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _permission_emergency_block(self) -> None:
+                try:
+                    engine = PermissionEngine(state.runtime.config, Path(state.runtime.config.paths.isis_root) / "config" / "permissions")
+                    result = engine.emergency_block_all()
+                    state.runtime.config_store.save(state.runtime.config)
+                    self._send_json(result)
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
             def _read_json(self) -> dict:
                 length = int(self.headers.get("content-length", "0"))
                 return json.loads(self.rfile.read(length).decode("utf-8")) if length else {}
@@ -784,4 +955,7 @@ class HudWebServer:
         payload = asdict(build_hud_snapshot(self.runtime))
         payload["recent_projects"] = self.store.list_projects(8)
         payload["recent_conversations"] = self.store.list_conversations(10)
+        payload["internet_mode"] = self.runtime.config.internet.mode
+        payload["internet_provider"] = self.runtime.config.internet.search_provider
+        payload["permission_profile"] = self.runtime.config.profile.value if hasattr(self.runtime.config.profile, "value") else str(self.runtime.config.profile)
         return payload

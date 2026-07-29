@@ -605,3 +605,15 @@ Data: 2026-07-28.
 - Criado adaptador CLI generico para motores TTS locais.
 - `kokoro_command` e `chatterbox_command` podem apontar para qualquer sintetizador local que gere WAV.
 - Tambem e aceito `tts_manifest.json` no diretorio do motor.
+
+## Fase 50 ISIS - Internet controlada e regras
+
+- Criado `aurora.internet`.
+- Criado `aurora.permissions`.
+- Pesquisa publica via `duckduckgo_html+bing_html`, sem API paga obrigatoria.
+- Protecoes: SSRF, dominio, esquema, porta, sanitizacao de consulta, prompt injection inicial e cache.
+- Historico: `D:\ISIS_IA\ISIS\data\databases\research_history.sqlite`.
+- Permissoes: `PermissionEngine`, parser de regras, ativacao versionada, perfis, autorizacoes temporarias e bloqueio emergencial.
+- HUD web recebeu aba `Internet`.
+- CLI recebeu comandos `internet-*`, `rules-*` e `permission-*`.
+- Downloads executaveis/scripts sao bloqueados antes de rede.

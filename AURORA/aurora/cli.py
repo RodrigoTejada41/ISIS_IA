@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from dataclasses import asdict
 from pathlib import Path
 
@@ -23,6 +24,12 @@ from aurora.core.knowledge_records import KnowledgeRecordStore
 from aurora.core.routing import RouteRequest
 from aurora.core.runtime import AuroraRuntime
 from aurora.core.assistant import IsisAssistantCore
+from aurora.internet.download_manager import DownloadManager
+from aurora.internet.internet_manager import InternetManager
+from aurora.permissions.permission_engine import ActionContext, PermissionEngine
+from aurora.permissions.profile_manager import PermissionProfileManager
+from aurora.permissions.rule_activation import RuleActivationService
+from aurora.permissions.rule_parser import RuleParser
 from aurora.automation.ui import UIAutomationService
 from aurora.automation.action_audit import PermissionPanelSnapshot, UIActionAuditLogger
 from aurora.automation.screen_bridge import ScreenAutomationBridge
@@ -174,6 +181,37 @@ def build_parser() -> argparse.ArgumentParser:
     key_acl_rollback = sub.add_parser("signature-key-acl-rollback")
     key_acl_rollback.add_argument("backup")
     key_acl_rollback.add_argument("--apply", action="store_true")
+    sub.add_parser("internet-status")
+    sub.add_parser("internet-test")
+    internet_search = sub.add_parser("internet-search")
+    internet_search.add_argument("query")
+    internet_search.add_argument("--mode", choices=["quick", "deep"], default="quick")
+    internet_search.add_argument("--approve", action="store_true")
+    internet_download = sub.add_parser("internet-download")
+    internet_download.add_argument("url")
+    internet_download.add_argument("--approve", action="store_true")
+    sub.add_parser("internet-cache-clear")
+    research_history = sub.add_parser("research-history")
+    research_history.add_argument("--limit", type=int, default=20)
+    rule_parse = sub.add_parser("rules-parse")
+    rule_parse.add_argument("text")
+    rule_apply = sub.add_parser("rules-apply")
+    rule_apply.add_argument("text")
+    rule_apply.add_argument("--approve", action="store_true")
+    rules_history = sub.add_parser("rules-history")
+    rules_history.add_argument("--limit", type=int, default=20)
+    permission_sim = sub.add_parser("permission-simulate")
+    permission_sim.add_argument("action")
+    permission_sim.add_argument("--resource", default="")
+    permission_sim.add_argument("--approve", action="store_true")
+    temp_auth = sub.add_parser("permission-temp-add")
+    temp_auth.add_argument("action")
+    temp_auth.add_argument("--resource", default="")
+    temp_auth.add_argument("--minutes", type=int, default=60)
+    temp_auth.add_argument("--max-uses", type=int, default=1)
+    sub.add_parser("permission-summary")
+    sub.add_parser("permission-profiles")
+    sub.add_parser("permission-emergency-block")
     sub.add_parser("auth-status")
     auth_bootstrap = sub.add_parser("auth-bootstrap")
     auth_bootstrap.add_argument("--overwrite", action="store_true")
@@ -223,6 +261,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     args = build_parser().parse_args(argv)
     runtime = AuroraRuntime(args.root)
 
@@ -640,6 +680,81 @@ def main(argv: list[str] | None = None) -> int:
             runtime.audit,
         )
         print(json.dumps([asdict(item) for item in index.search(args.query, args.limit)], ensure_ascii=False))
+        return 0
+
+    if args.command == "internet-status":
+        manager = InternetManager(runtime.config, Path(runtime.config.paths.isis_root))
+        print(json.dumps(manager.status(), ensure_ascii=False))
+        return 0
+
+    if args.command == "internet-test":
+        manager = InternetManager(runtime.config, Path(runtime.config.paths.isis_root))
+        print(json.dumps(manager.test_connection(), ensure_ascii=False))
+        return 0
+
+    if args.command == "internet-search":
+        manager = InternetManager(runtime.config, Path(runtime.config.paths.isis_root))
+        result = manager.agent.research(args.query, mode=args.mode, confirmed=args.approve)
+        print(json.dumps(result, ensure_ascii=False))
+        return 0 if result.get("ok") else 2
+
+    if args.command == "internet-cache-clear":
+        manager = InternetManager(runtime.config, Path(runtime.config.paths.isis_root))
+        print(json.dumps({"removed": manager.agent.cache.clear()}, ensure_ascii=False))
+        return 0
+
+    if args.command == "internet-download":
+        result = DownloadManager(runtime.config, Path(runtime.config.paths.isis_root)).download(args.url, confirmed=args.approve)
+        print(json.dumps(asdict(result), ensure_ascii=False))
+        return 0 if result.ok else 2
+
+    if args.command == "research-history":
+        manager = InternetManager(runtime.config, Path(runtime.config.paths.isis_root))
+        print(json.dumps(manager.agent.history.list(args.limit), ensure_ascii=False))
+        return 0
+
+    if args.command == "rules-parse":
+        parsed = RuleParser().parse(args.text)
+        print(json.dumps(asdict(parsed), ensure_ascii=False))
+        return 0
+
+    if args.command == "rules-apply":
+        service = RuleActivationService(runtime.config, runtime.config_store, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        result = service.apply_text(args.text, confirmed=args.approve)
+        print(json.dumps(result, ensure_ascii=False))
+        return 0 if result.get("ok") else 2
+
+    if args.command == "rules-history":
+        service = RuleActivationService(runtime.config, runtime.config_store, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        print(json.dumps(service.history(args.limit), ensure_ascii=False))
+        return 0
+
+    if args.command == "permission-simulate":
+        engine = PermissionEngine(runtime.config, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        print(json.dumps(engine.simulate(ActionContext(args.action, args.resource, confirmed=args.approve)), ensure_ascii=False))
+        return 0
+
+    if args.command == "permission-temp-add":
+        engine = PermissionEngine(runtime.config, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        auth = engine.add_temporary(args.action, args.resource, args.minutes, args.max_uses)
+        print(json.dumps(asdict(auth), ensure_ascii=False))
+        return 0
+
+    if args.command == "permission-summary":
+        engine = PermissionEngine(runtime.config, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        print(json.dumps(engine.summary(), ensure_ascii=False))
+        return 0
+
+    if args.command == "permission-profiles":
+        profiles = PermissionProfileManager(Path(runtime.config.paths.isis_root) / "config" / "permissions").list_profiles()
+        print(json.dumps(profiles, ensure_ascii=False))
+        return 0
+
+    if args.command == "permission-emergency-block":
+        engine = PermissionEngine(runtime.config, Path(runtime.config.paths.isis_root) / "config" / "permissions")
+        result = engine.emergency_block_all()
+        runtime.config_store.save(runtime.config)
+        print(json.dumps(result, ensure_ascii=False))
         return 0
 
     if args.command == "skills":

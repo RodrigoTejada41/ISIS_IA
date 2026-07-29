@@ -43,6 +43,42 @@ class VoiceSettings(BaseModel):
     strict_offline: bool = True
 
 
+class InternetSettings(BaseModel):
+    enabled: bool = True
+    mode: str = "controlled"
+    automatic_search: bool = True
+    default_research_mode: str = "quick"
+    search_provider: str = "duckduckgo_html+bing_html"
+    max_results: int = 5
+    max_pages: int = 3
+    deep_max_results: int = 10
+    deep_max_pages: int = 6
+    max_results_hard_limit: int = 20
+    max_pages_hard_limit: int = 10
+    max_page_bytes: int = 1500000
+    timeout_seconds: int = 10
+    requests_per_minute: int = 10
+    requests_per_hour: int = 60
+    allow_downloads: bool = False
+    max_download_mb: int = 50
+    save_research: bool = True
+    save_sources: bool = True
+    update_obsidian: bool = False
+    require_memory_confirmation: bool = True
+    use_cache: bool = True
+    cache_ttl_seconds: int = 86400
+    strict_offline: bool = False
+    use_browser: bool = False
+    allow_javascript: bool = False
+    allow_cookies: bool = False
+    allow_login: bool = False
+    allow_private_networks: bool = False
+    trusted_domains: list[str] = Field(default_factory=lambda: ["python.org", "github.com", "docs.github.com", "microsoft.com", "openai.com", "wikipedia.org"])
+    allowed_domains: list[str] = Field(default_factory=list)
+    blocked_domains: list[str] = Field(default_factory=lambda: ["localhost", "127.0.0.1", "0.0.0.0"])
+    blocked_extensions: list[str] = Field(default_factory=lambda: [".exe", ".msi", ".bat", ".cmd", ".ps1", ".scr", ".com", ".vbs", ".js", ".jar", ".dll"])
+
+
 class ObsidianSettings(BaseModel):
     vault_name: str = "CEREBRO_VIVO"
     source_path: str = r"E:\Projetos\CEREBRO_VIVO"
@@ -97,6 +133,7 @@ class AuroraConfig(BaseModel):
     privacy: PrivacySettings = Field(default_factory=PrivacySettings)
     profile: PrivilegeProfile = PrivilegeProfile.CONTROLLED
     voice: VoiceSettings = Field(default_factory=VoiceSettings)
+    internet: InternetSettings = Field(default_factory=InternetSettings)
     resource_limits: ResourceLimits = Field(default_factory=ResourceLimits)
     models: list[ModelMapping] = Field(
         default_factory=lambda: [

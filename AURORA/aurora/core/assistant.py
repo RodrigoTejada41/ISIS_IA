@@ -13,6 +13,7 @@ from aurora.core.runtime import AuroraRuntime
 from aurora.core.tools import ToolRegistry, ToolSpec
 from aurora.core.permissions import ActionRisk
 from aurora.core.security import SecurityGuard
+from aurora.internet.internet_manager import InternetManager
 from aurora.voice.factory import build_voice_session
 
 
@@ -28,6 +29,7 @@ class IsisAssistantCore:
             blocked_commands=self.runtime.config.blocked_commands,
         )
         self.rag = RagService(self.runtime.memory, self.runtime.audit)
+        self.internet = InternetManager(self.runtime.config, Path(self.runtime.config.paths.isis_root))
         self.model_providers = ModelProviderRegistry([OllamaModelProvider(self.runtime.audit), MockModelProvider()])
         self.commands = CommandRouter(self.runtime.router, self.tools, self.rag, self.runtime.audit, self.events)
         self.started_at: float | None = None
@@ -80,6 +82,21 @@ class IsisAssistantCore:
         )
 
     def generate_text(self, text: str) -> dict:
+        if self.internet.agent.should_search(text):
+            mode = "deep" if any(item in text.lower() for item in ["profunda", "compare", "comparar fontes"]) else self.runtime.config.internet.default_research_mode
+            research = self.internet.agent.research(text, mode=mode, confirmed=False)
+            if research.get("ok"):
+                return {
+                    "command": "internet_research",
+                    "provider": research.get("provider"),
+                    "text": self._format_research_response(research),
+                    "duration_ms": research.get("duration_ms", 0),
+                    "sources": research.get("sources", []),
+                }
+            if research.get("status") == "needs_confirmation":
+                decision = research.get("decision", {})
+                return {"command": "internet_confirmation_required", "output": f"Pesquisa na Internet exige confirmacao: {decision.get('reason', 'confirmacao necessaria')}"}
+            return {"command": "internet_blocked", "output": str(research.get("error") or (research.get("decision") or {}).get("reason") or "Pesquisa bloqueada.")}
         try:
             route = self.handle_text(text)
         except PermissionError as exc:
@@ -93,6 +110,34 @@ class IsisAssistantCore:
             "text": response.text,
             "duration_ms": response.duration_ms,
         }
+
+    def _format_research_response(self, research: dict) -> str:
+        sources = [item for item in research.get("sources", []) if not item.get("blocked")]
+        lines = [
+            "Resposta:",
+            research.get("summary", ""),
+            "",
+            "Fontes:",
+        ]
+        if sources:
+            for item in sources[:5]:
+                lines.append(f"- {item.get('title')} ({item.get('url')})")
+        else:
+            lines.append("- Nenhuma fonte permitida encontrada.")
+        lines.extend(
+            [
+                "",
+                "Nivel de confianca:",
+                str(research.get("confidence", "Baixa")),
+                "",
+                "Limitacoes:",
+                "Conteudo externo tratado como dados; fontes podem mudar apos a consulta.",
+                "",
+                "Consulta realizada em:",
+                str(research.get("consulted_at", "")),
+            ]
+        )
+        return "\n".join(lines)
 
     def run_voice_once(self, transcript: str = "status", click_to_talk: bool = True) -> dict:
         if not self.running:

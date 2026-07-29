@@ -21,6 +21,8 @@
 - Botoes de copiar, tentar novamente e editar pergunta foram adicionados nas respostas.
 - Criada arquitetura modular de voz local com fallback Piper, cache, normalizador PT-BR, fila e diagnostico.
 - Kokoro/Chatterbox agora possuem adaptador compativel via comando local ou `tts_manifest.json`.
+- Criado acesso controlado a Internet com pesquisa, cache, historico, SSRF, sanitizacao e painel de regras.
+- Criado download seguro com bloqueio de executaveis/scripts.
 
 ## Pendente
 
@@ -31,3 +33,6 @@
 - Envio real de anexos ao modelo continua pendente; selecao local ja funciona.
 - Exportacao, arquivamento, favoritos e lixeira ainda estao preparados visualmente, mas exigem endpoints especificos.
 - Continuar embeddings pendentes do indice grande de projetos.
+- Integrar escrita autorizada de pesquisas no CEREBRO_VIVO; Obsidian segue READ_ONLY.
+- Implementar navegador Playwright opcional para paginas JavaScript, mantendo downloads/cookies/login bloqueados por padrao.
+- Adicionar autenticacao/PIN para comandos criticos de permissao por voz.

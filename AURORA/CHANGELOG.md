@@ -554,3 +554,10 @@
 - Kokoro e Chatterbox deixam de ser stubs sempre indisponiveis.
 - Adicionado adaptador TTS por CLI/manifesto local para motores offline compativeis.
 - Adicionados campos `kokoro_command`, `kokoro_model_dir`, `kokoro_voice`, `chatterbox_command`, `chatterbox_model_dir` e `chatterbox_voice`.
+
+## 0.7.0 - 2026-07-28
+
+- Adicionado modulo de Internet controlada com pesquisa publica, cache e historico.
+- Adicionada Central de Regras e Permissoes com parser, simulacao, perfis, autorizacoes temporarias e bloqueio emergencial.
+- Adicionadas protecoes SSRF, dominio, prompt injection inicial e bloqueio de downloads executaveis.
+- HUD web ganhou aba `Internet`.

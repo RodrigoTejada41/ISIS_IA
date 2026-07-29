@@ -16,6 +16,7 @@ build/
 AURORA/.playwright-cli/
 AURORA/data/audit/
 AURORA/backups/
+ISIS/config/permissions/
 *.log
 
 # ISIS runtime/data artifacts

@@ -65,3 +65,9 @@
 - Decisao: Kokoro e Chatterbox nao sao rejeitados; sao adaptadores compativeis via comando local ou `tts_manifest.json`.
 - Motivo: o usuario quer manter esses motores elegiveis, mas ainda sem inventar pacote/modelo pt-BR nao validado.
 - Consequencia: quando houver instalacao local configurada, o roteador usa Kokoro/Chatterbox antes do fallback Piper.
+
+## 2026-07-28 - Internet controlada e Central de Regras
+
+- Decisao: implementar Internet em modo controlado com `PermissionEngine` central, SSRF obrigatorio e pesquisa por HTTP simples.
+- Motivo: a ISIS precisa pesquisar sem API paga obrigatoria e sem transformar acesso online em permissao irrestrita.
+- Consequencia: pesquisas publicas passam por permissao, dominio, sanitizacao, cache e historico; downloads executaveis seguem bloqueados.

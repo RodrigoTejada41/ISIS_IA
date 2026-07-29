@@ -1356,3 +1356,39 @@ Validacao:
 - `python -m pytest tests\test_voice_architecture.py tests\test_voice.py tests\test_local_voice_providers.py tests\test_phase47_voice_hud.py -q --basetemp .tmp\pytest-voice-compat-full`: 13 passed.
 - `python -m pytest -q --basetemp .tmp\pytest-full-after-voice-compat`: 168 passed.
 - `python -m aurora.cli voice-status`: Kokoro/Chatterbox aparecem como compativeis, aguardando comando local configurado; Piper segue disponivel.
+
+## 2026-07-28 - Internet controlada, pesquisa e Central de Regras
+
+Backup:
+
+- `AURORA\backups\manual\internet_permissions_20260728_231848`.
+
+Alteracoes:
+
+- Criado pacote `aurora.internet`.
+- Criado pacote `aurora.permissions`.
+- Integrado `ResearchAgent` ao `IsisAssistantCore`.
+- Criado `DownloadManager` seguro.
+- Criados comandos CLI `internet-status`, `internet-test`, `internet-search`, `internet-download`, `internet-cache-clear`, `research-history`, `rules-parse`, `rules-apply`, `rules-history`, `permission-summary`, `permission-simulate`, `permission-temp-add`, `permission-profiles` e `permission-emergency-block`.
+- HUD web recebeu aba `Internet` com status, teste, pesquisa, parser/aplicacao de regras, cache e bloqueio emergencial.
+- Criada documentacao de Internet, seguranca web, pesquisa, memoria e permissoes.
+
+Validacao:
+
+- `python -m pytest tests\test_internet_permissions.py tests\test_config_runtime_cli.py tests\test_phase48_operational_hud.py tests\test_phase7_core.py -q --basetemp .tmp\pytest-internet-focused`: 23 passed.
+- `python -m aurora.cli internet-status`: Internet `controlled`, provedor `duckduckgo_html+bing_html`.
+- `python -m aurora.cli internet-test`: `ok=true`, HTTP 200.
+- `python -m aurora.cli internet-search "Python pathlib official documentation" --approve`: 5 fontes, primeira `https://www.python.org/`.
+- `python -m aurora.cli internet-download https://example.com/tool.exe --approve`: bloqueado por tipo `.exe`.
+- `python -m pytest -q --basetemp .tmp\pytest-full-internet-permissions`: 175 passed.
+- `python -m pytest -q --basetemp .tmp\pytest-full-internet-final`: 175 passed.
+- `python -m pytest -q --basetemp .tmp\pytest-full-internet-final2`: 175 passed.
+- HUD web reiniciado em `http://127.0.0.1:8765/`.
+- `/api/internet-status`: `enabled=true`, `mode=controlled`.
+- `/api/internet-search`: 5 fontes, primeira `https://www.python.org/`.
+
+Limitacoes:
+
+- Escrita em CEREBRO_VIVO permanece desativada por padrao.
+- Navegador Playwright para paginas JavaScript ainda nao foi ativado.
+- Comandos criticos por voz ainda precisam de autenticacao/PIN local.

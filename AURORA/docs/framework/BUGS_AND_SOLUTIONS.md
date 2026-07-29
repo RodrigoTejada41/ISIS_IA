@@ -83,3 +83,15 @@
 - Problema: a tela de mensagens nao exibia barra de rolagem clara para ver mensagens antigas/ultimas.
 - Causa: a rolagem estava no container `workspace`, enquanto `#messages` nao tinha altura flex nem `overflow-y`.
 - Solucao: tornar `#conversa` um container flex, aplicar `overflow-y:auto` em `#messages` e rolar automaticamente para o final ao adicionar/carregar mensagens.
+
+## Pesquisa sem fonte parseavel no DuckDuckGo HTML
+
+- Problema: a pesquisa real retornou HTML, mas sem resultados extraidos pelo parser DuckDuckGo neste ambiente.
+- Causa: markup/resposta publica do buscador variou.
+- Solucao: adicionar fallback `bing_html` e decodificar URLs finais de redirecionamento.
+
+## Pagina externa retornou conteudo compactado no trecho
+
+- Problema: uma fonte retornou bytes gzip no excerto.
+- Causa: servidor ignorou ou variou `Accept-Encoding`.
+- Solucao: forcar `Accept-Encoding: identity`, descompactar gzip quando indicado e remover caracteres de controle.

@@ -27,11 +27,11 @@
     "max_logs_gb": 10
   },
   "privacy": {
-    "offline_mode": true,
+    "offline_mode": false,
     "screen_analysis_enabled": false,
     "camera_enabled": false,
     "microphone_enabled": false,
-    "internet_enabled": false
+    "internet_enabled": true
   },
   "profile": "MEDIUM",
   "voice": {
@@ -65,6 +65,64 @@
     "audio_cache_enabled": true,
     "audio_cache_max_files": 200,
     "strict_offline": true
+  },
+  "internet": {
+    "enabled": true,
+    "mode": "controlled",
+    "automatic_search": true,
+    "default_research_mode": "quick",
+    "search_provider": "duckduckgo_html+bing_html",
+    "max_results": 5,
+    "max_pages": 3,
+    "deep_max_results": 10,
+    "deep_max_pages": 6,
+    "max_results_hard_limit": 20,
+    "max_pages_hard_limit": 10,
+    "max_page_bytes": 1500000,
+    "timeout_seconds": 10,
+    "requests_per_minute": 10,
+    "requests_per_hour": 60,
+    "allow_downloads": false,
+    "max_download_mb": 50,
+    "save_research": true,
+    "save_sources": true,
+    "update_obsidian": false,
+    "require_memory_confirmation": true,
+    "use_cache": true,
+    "cache_ttl_seconds": 86400,
+    "strict_offline": false,
+    "use_browser": false,
+    "allow_javascript": false,
+    "allow_cookies": false,
+    "allow_login": false,
+    "allow_private_networks": false,
+    "trusted_domains": [
+      "python.org",
+      "github.com",
+      "docs.github.com",
+      "microsoft.com",
+      "openai.com",
+      "wikipedia.org"
+    ],
+    "allowed_domains": [],
+    "blocked_domains": [
+      "localhost",
+      "127.0.0.1",
+      "0.0.0.0"
+    ],
+    "blocked_extensions": [
+      ".exe",
+      ".msi",
+      ".bat",
+      ".cmd",
+      ".ps1",
+      ".scr",
+      ".com",
+      ".vbs",
+      ".js",
+      ".jar",
+      ".dll"
+    ]
   },
   "resource_limits": {
     "max_ram_mb": 24576,
