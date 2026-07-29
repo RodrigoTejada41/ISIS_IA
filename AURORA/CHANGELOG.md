@@ -561,3 +561,8 @@
 - Adicionada Central de Regras e Permissoes com parser, simulacao, perfis, autorizacoes temporarias e bloqueio emergencial.
 - Adicionadas protecoes SSRF, dominio, prompt injection inicial e bloqueio de downloads executaveis.
 - HUD web ganhou aba `Internet`.
+
+## 0.7.1 - 2026-07-29
+
+- HUD web deixou de usar TTS do Windows/Chrome.
+- Botao `VOZ LOCAL` e respostas passam a tocar somente o WAV gerado pelo Piper local.

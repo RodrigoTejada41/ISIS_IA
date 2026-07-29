@@ -30,6 +30,12 @@
 - Motivo: Piper local e funcional, mas a voz e mais robotica; Chrome/Windows pode oferecer vozes `pt-BR` mais naturais sem instalar modelo pesado.
 - Consequencia: `VOZ NATURAL` usa `speechSynthesis`; `MIC` usa `SpeechRecognition` quando disponivel e autorizado no navegador.
 
+## 2026-07-29 - Voz local obrigatoria no HUD
+
+- Decisao: respostas e teste de voz do HUD web usam somente audio local gerado por Piper.
+- Motivo: o usuario rejeitou a voz `Microsoft Maria` do Windows/Chrome.
+- Consequencia: `speechSynthesis` deixa de ser usado no HUD; `MIC` permanece usando `SpeechRecognition` apenas para ditado.
+
 ## 2026-07-28 - Texto separado para fala
 
 - Decisao: manter a resposta exibida intacta e gerar uma versao limpa apenas para TTS.

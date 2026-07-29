@@ -84,6 +84,12 @@
 - Causa: a rolagem estava no container `workspace`, enquanto `#messages` nao tinha altura flex nem `overflow-y`.
 - Solucao: tornar `#conversa` um container flex, aplicar `overflow-y:auto` em `#messages` e rolar automaticamente para o final ao adicionar/carregar mensagens.
 
+## HUD puxava voz Microsoft Maria
+
+- Problema: a voz da resposta ainda era a voz do Windows/Chrome.
+- Causa: o HUD priorizava `speechSynthesis` e selecionava `Microsoft Maria - Portuguese (Brazil)`.
+- Solucao: remover TTS do navegador para respostas e testes; tocar somente o audio local gerado pelo Piper.
+
 ## Pesquisa sem fonte parseavel no DuckDuckGo HTML
 
 - Problema: a pesquisa real retornou HTML, mas sem resultados extraidos pelo parser DuckDuckGo neste ambiente.

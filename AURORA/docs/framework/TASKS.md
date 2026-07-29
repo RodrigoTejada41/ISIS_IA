@@ -23,6 +23,7 @@
 - Kokoro/Chatterbox agora possuem adaptador compativel via comando local ou `tts_manifest.json`.
 - Criado acesso controlado a Internet com pesquisa, cache, historico, SSRF, sanitizacao e painel de regras.
 - Criado download seguro com bloqueio de executaveis/scripts.
+- Corrigido HUD para usar apenas Piper local na saida de voz.
 
 ## Pendente
 

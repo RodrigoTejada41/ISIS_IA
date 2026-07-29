@@ -345,7 +345,7 @@ input {{ flex:1; min-width:0; background:rgba(3,10,16,.92); border:1px solid rgb
   </section>
   <footer class="footer">
     <input id="prompt" placeholder="Digite um comando para ISIS..." autocomplete="off">
-    <button class="btn" id="voice">VOZ NATURAL</button>
+    <button class="btn" id="voice">VOZ LOCAL</button>
     <button class="btn" id="mic">MIC</button>
     <button class="btn" id="attach">ANEXO</button>
     <button class="btn send" id="send">ENVIAR</button>
@@ -367,7 +367,6 @@ let activeConversationId = null;
 let lastPrompt = "";
 let recognition = null;
 let listening = false;
-let naturalVoice = null;
 function unlockInput() {{
   sending = false;
   window.setTimeout(() => input.focus(), 0);
@@ -416,29 +415,9 @@ function play(url) {{
   if (!url) return;
   new Audio(url).play().catch(() => setStatus("Audio gerado; autoplay bloqueado pelo navegador"));
 }}
-function loadNaturalVoice() {{
-  const voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
-  naturalVoice = voices.find(v => /pt-BR/i.test(v.lang) && /Maria|Francisca|female|Helena|Luciana/i.test(v.name))
-    || voices.find(v => /pt-BR/i.test(v.lang))
-    || voices.find(v => /^pt/i.test(v.lang))
-    || null;
-  const label = naturalVoice ? `${{naturalVoice.name}} (${{naturalVoice.lang}})` : "Voz natural indisponivel; Piper local sera usado";
+function setLocalVoiceInfo(engine, voice) {{
   const info = document.getElementById("voiceInfo");
-  if (info) info.textContent = label;
-}}
-function speakNatural(text, fallbackUrl=null) {{
-  if (!("speechSynthesis" in window)) {{ play(fallbackUrl); return; }}
-  loadNaturalVoice();
-  if (!naturalVoice) {{ play(fallbackUrl); return; }}
-  speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text.slice(0, 900));
-  utterance.lang = naturalVoice.lang || "pt-BR";
-  utterance.voice = naturalVoice;
-  utterance.rate = 0.92;
-  utterance.pitch = 1.08;
-  utterance.volume = 1;
-  utterance.onerror = () => play(fallbackUrl);
-  speechSynthesis.speak(utterance);
+  if (info) info.textContent = `${{engine || "piper"}} / ${{voice || "dii_pt-BR"}}`;
 }}
 function setupMic() {{
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -525,7 +504,7 @@ async function pollJob(jobId) {{
     const meta = data.model ? `Modelo: ${{data.model}} | ${{Math.round((data.duration_ms || 0) / 100) / 10}}s` : `${{Math.round((data.duration_ms || 0) / 100) / 10}}s`;
     add("ISIS", data.response || data.error || "", "isis", meta);
     setStatus(data.ok ? "Resposta concluida" : "Ocorreu um erro");
-    if (data.ok) speakNatural(data.speech_text || data.response || "", data.audio_url);
+    if (data.ok) play(data.audio_url);
     else play(data.audio_url);
     unlockInput();
   }} catch (error) {{
@@ -536,15 +515,15 @@ async function pollJob(jobId) {{
 }}
 add("Sistema", "Ollama local ativo. Modelo de codigo: " + snapshot.coding_model);
 add("Memoria", "Memoria local pronta para consulta. Indexacao semantica segue em segundo plano.");
-add("ISIS", "Pronta para comandos locais. Use MIC para ditar no navegador e VOZ NATURAL para testar a voz do sistema.", "isis");
+add("ISIS", "Pronta para comandos locais. Use MIC para ditar no navegador e VOZ LOCAL para testar Piper.", "isis");
 document.getElementById("send").onclick = sendPrompt;
 input.onkeydown = e => {{ if (e.key === "Enter") sendPrompt(); }};
 document.getElementById("voice").onclick = async () => {{
-  setStatus("Testando voz natural...");
+  setStatus("Testando voz local Piper...");
   const res = await fetch("/api/voice-test", {{ method:"POST" }});
   const data = await res.json();
-  setStatus(data.ok ? "Voz natural acionada; Piper fica como fallback" : data.error);
-  speakNatural("ISIS voz natural ativa no navegador. Piper local permanece como reserva.", data.audio_url);
+  setStatus(data.ok ? "Voz local Piper acionada" : data.error);
+  play(data.audio_url);
 }};
 document.getElementById("voiceDiag").onclick = async () => {{
   const res = await fetch("/api/voice-status");
@@ -634,7 +613,6 @@ fileInput.onchange = () => {{
 }};
 document.getElementById("stop").onclick = () => {{
   stopped = true;
-  if ("speechSynthesis" in window) speechSynthesis.cancel();
   if (recognition && listening) recognition.stop();
   if (activeJobId) fetch("/api/chat-cancel", {{ method:"POST", headers:{{"content-type":"application/json"}}, body:JSON.stringify({{job_id:activeJobId}}) }});
   setStatus("Parada solicitada");
@@ -673,10 +651,7 @@ document.getElementById("sideSearch").onkeydown = async e => {{
   const data = await res.json();
   setStatus(data.ok ? `Busca local: ${{data.results.conversations.length}} conversas` : "Falha na busca");
 }};
-if ("speechSynthesis" in window) {{
-  speechSynthesis.onvoiceschanged = loadNaturalVoice;
-  loadNaturalVoice();
-}}
+setLocalVoiceInfo(snapshot.tts_engine, snapshot.tts_voice);
 setupMic();
 </script>
 </body>

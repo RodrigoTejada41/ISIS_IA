@@ -617,3 +617,9 @@ Data: 2026-07-28.
 - HUD web recebeu aba `Internet`.
 - CLI recebeu comandos `internet-*`, `rules-*` e `permission-*`.
 - Downloads executaveis/scripts sao bloqueados antes de rede.
+
+## Correcao voz local HUD web
+
+- Removido uso de `speechSynthesis` para TTS no HUD.
+- `VOZ LOCAL` e respostas usam apenas audio local gerado pelo Piper.
+- `MIC` continua usando API do navegador somente para ditado.

@@ -28,7 +28,7 @@ Layout:
 - Centro com canal principal de conversa.
 - Painel direito com nucleo IA, modelo de codigo, embeddings, notas e status offline.
 - Rodape com campo de comando e acoes de microfone/anexo/envio/parada.
-- Rodape com botao `VOZ TESTE` para validar Piper local.
+- Rodape com botao `VOZ LOCAL` para validar Piper local.
 - Campo de comando envia prompts reais para `IsisAssistantCore`.
 - Respostas aparecem no historico da conversa.
 - Respostas geram audio Piper quando TTS esta pronto.
@@ -55,7 +55,7 @@ Validacao:
 ## Melhoria web mic/voz/navegacao
 
 - `MIC` usa Web Speech Recognition do navegador em `pt-BR`.
-- `VOZ NATURAL` usa `speechSynthesis` do Chrome/Windows e deixa Piper como fallback.
+- `VOZ LOCAL` usa o WAV gerado pelo Piper local. A voz TTS do Windows/Chrome nao e usada para responder.
 - Navegacao lateral alterna paineis reais de memoria, projetos, documentos, automacoes, agenda e configuracoes.
 - `ANEXO` abre seletor local de arquivos e registra nomes no historico.
 - `PARAR` cancela voz web, ditado e resposta pendente no cliente.

@@ -1392,3 +1392,27 @@ Limitacoes:
 - Escrita em CEREBRO_VIVO permanece desativada por padrao.
 - Navegador Playwright para paginas JavaScript ainda nao foi ativado.
 - Comandos criticos por voz ainda precisam de autenticacao/PIN local.
+
+## 2026-07-29 - Correcao voz local no HUD web
+
+Diagnostico:
+
+- Usuario informou que a HUD ainda puxava `Microsoft Maria - Portuguese (Brazil)`.
+- Causa confirmada: JavaScript priorizava `speechSynthesis` do Windows/Chrome.
+
+Alteracoes:
+
+- Removido uso de `speechSynthesis` e `SpeechSynthesisUtterance` da HUD.
+- Botao alterado para `VOZ LOCAL`.
+- Respostas e teste de voz passam a tocar somente `audio_url` gerado pelo Piper.
+- `MIC` permanece usando `SpeechRecognition` apenas para entrada por ditado.
+
+Validacao:
+
+- `python -m py_compile aurora\ui\hud_web.py`.
+- `python -m pytest tests\test_phase48_operational_hud.py tests\test_phase47_voice_hud.py tests\test_voice_architecture.py -q --basetemp .tmp\pytest-hud-local-voice`: 11 passed.
+- `python -m aurora.cli voice-test "ISIS usando voz local Piper."`: `engine=piper`, `voice=dii_pt-BR`.
+- HUD web reiniciado em `http://127.0.0.1:8765/`.
+- HTML servido: `speechSynthesis=false`, `SpeechSynthesisUtterance=false`, `Microsoft Maria=false`, `VOZ LOCAL=true`.
+- `/api/voice-test`: WAV local gerado.
+- `python -m pytest -q --basetemp .tmp\pytest-full-local-voice`: 175 passed.

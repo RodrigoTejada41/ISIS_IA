@@ -54,6 +54,10 @@ def test_web_hud_html_contains_operational_endpoints():
     assert "Tentar novamente" in html
     assert "Copiar" in html
     assert "/api/voice-test" in html
+    assert "VOZ LOCAL" in html
+    assert "speechSynthesis" not in html
+    assert "SpeechSynthesisUtterance" not in html
+    assert "Microsoft Maria" not in html
     assert "window.setTimeout(() => sendPrompt(), 150)" in html
     assert ".app { position:relative; height:100vh; min-height:0;" in html
     assert "grid-template-rows:78px minmax(0,1fr) 74px" in html
