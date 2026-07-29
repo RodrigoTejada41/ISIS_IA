@@ -1440,3 +1440,26 @@ Validacao:
 - HTML servido: `audio.controls=true`, `local-audio=true`, `speechSynthesis=false`.
 - `/api/voice-test`: WAV local retornado.
 - `python -m pytest -q --basetemp .tmp\pytest-full-audio-player`: 175 passed.
+
+## 2026-07-29 - Voz local automatica sem player visivel
+
+Diagnostico:
+
+- Usuario nao quer player nem "audio gerado"; quer resposta falada automaticamente.
+- O player visivel resolvia autoplay, mas nao atendia a experiencia pedida.
+
+Alteracoes:
+
+- Removido player `audio controls` das mensagens.
+- Criado canal `Audio` invisivel para voz local.
+- `VOZ LOCAL`, `ENVIAR`, Enter e `MIC` chamam `unlockLocalVoice()` antes da resposta.
+- A resposta toca automaticamente em `play(audio_url)` quando o WAV Piper fica pronto.
+
+Validacao:
+
+- `python -m py_compile aurora\ui\hud_web.py`.
+- `python -m pytest tests\test_phase48_operational_hud.py tests\test_phase47_voice_hud.py tests\test_voice_architecture.py -q --basetemp .tmp\pytest-live-local-voice`: 11 passed.
+- HUD reiniciado em `http://127.0.0.1:8765/`.
+- HTML servido: `unlockLocalVoice=true`, `voiceAudio=true`, `audio.controls=false`, `local-audio=false`, `speechSynthesis=false`.
+- `/api/voice-test`: WAV local retornado.
+- `python -m pytest -q --basetemp .tmp\pytest-full-live-local-voice`: 175 passed.

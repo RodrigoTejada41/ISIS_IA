@@ -55,9 +55,11 @@ def test_web_hud_html_contains_operational_endpoints():
     assert "Copiar" in html
     assert "/api/voice-test" in html
     assert "VOZ LOCAL" in html
-    assert "audio.controls = true" in html
-    assert "local-audio" in html
-    assert "clique no player da mensagem para ouvir" in html
+    assert "function unlockLocalVoice()" in html
+    assert "function voiceAudio()" in html
+    assert "Falando com voz local Piper" in html
+    assert "local-audio" not in html
+    assert "audio.controls = true" not in html
     assert "speechSynthesis" not in html
     assert "SpeechSynthesisUtterance" not in html
     assert "Microsoft Maria" not in html

@@ -94,7 +94,7 @@
 
 - Problema: o HUD indicava `Audio gerado; autoplay bloqueado pelo navegador` e nao saia voz automaticamente.
 - Causa: Chrome pode bloquear `Audio.play()` apos retorno assincrono do servidor.
-- Solucao: anexar um player `audio controls` em cada resposta/teste com WAV local para o usuario tocar manualmente quando autoplay for bloqueado.
+- Solucao: criar canal de audio local invisivel e desbloquea-lo no clique/Enter/MIC antes da resposta; o WAV Piper toca automaticamente sem player visivel.
 
 ## Pesquisa sem fonte parseavel no DuckDuckGo HTML
 

@@ -566,4 +566,4 @@
 
 - HUD web deixou de usar TTS do Windows/Chrome.
 - Botao `VOZ LOCAL` e respostas passam a tocar somente o WAV gerado pelo Piper local.
-- Mensagens com voz local agora exibem player de audio para contornar bloqueio de autoplay do navegador.
+- Voz local agora usa canal de audio invisivel desbloqueado por interacao do usuario, sem player visivel na conversa.
