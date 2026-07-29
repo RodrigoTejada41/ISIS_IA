@@ -71,3 +71,15 @@
 - Problema: apos resposta sobre codigo, nao aparecia opcao de falar nem digitar novamente.
 - Causa: `.app` usava `min-height:100vh` com `overflow:hidden`; respostas longas empurravam o footer para fora do viewport.
 - Solucao: fixar o HUD em `height:100vh`, usar linha central `minmax(0,1fr)`, manter `.workspace` rolavel e devolver foco ao input ao concluir/cancelar/erro.
+
+## Motor natural nao validado localmente
+
+- Problema: o pedido exige Kokoro/Chatterbox, mas nao havia modelo pt-BR instalado e validado.
+- Causa: qualidade/licenca/pronuncia nao podem ser inferidas sem sintese real local.
+- Solucao: implementar adaptadores compativeis via CLI/manifesto local; Piper fica como fallback enquanto Kokoro/Chatterbox nao forem configurados.
+
+## Conversa sem rolagem propria
+
+- Problema: a tela de mensagens nao exibia barra de rolagem clara para ver mensagens antigas/ultimas.
+- Causa: a rolagem estava no container `workspace`, enquanto `#messages` nao tinha altura flex nem `overflow-y`.
+- Solucao: tornar `#conversa` um container flex, aplicar `overflow-y:auto` em `#messages` e rolar automaticamente para o final ao adicionar/carregar mensagens.

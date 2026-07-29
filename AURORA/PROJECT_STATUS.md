@@ -579,3 +579,29 @@ Data: 2026-07-28.
 - Causa do novo travamento percebido: resposta longa ocultava o footer por combinacao de `min-height:100vh` e `overflow:hidden`.
 - HUD desktop agora usa `height:100vh`, linha central `minmax(0,1fr)` e scroll restrito ao workspace.
 - Ao concluir, cancelar ou falhar um job, o HUD libera `sending` e devolve foco ao campo de comando.
+
+## Fase 49 ISIS - Voz local modular
+
+- Criado `aurora.voice.voice_manager.VoiceManager`.
+- Criado `aurora.voice.voice_router.VoiceRouter`.
+- Criados motores TTS modulares em `aurora.voice.tts`.
+- Piper `dii_pt-BR` permanece fallback offline validado.
+- Kokoro e Chatterbox entram como motores compativeis por comando local ou `tts_manifest.json`; Piper permanece fallback ate haver instalacao configurada.
+- Criado cache local de audio por hash.
+- Criado normalizador PT-BR complementar para paths, HTTP 200, email, percentuais e temperatura.
+- Criados `SpeechQueue`, `InterruptionManager` e `VoiceActivityDetector`.
+- CLI: `voice-test`, `voice-cache-clear`, `voice-benchmark`.
+- HUD web: diagnostico de voz e limpeza de cache na aba Configuracoes.
+- Validacao completa: `167 passed`.
+
+## Correcao rolagem da conversa HUD web
+
+- `#messages` agora possui rolagem vertical propria.
+- `#conversa` virou container flex com altura controlada.
+- Novas mensagens e conversas carregadas rolam automaticamente para o final.
+
+## Compatibilidade Kokoro/Chatterbox
+
+- Criado adaptador CLI generico para motores TTS locais.
+- `kokoro_command` e `chatterbox_command` podem apontar para qualquer sintetizador local que gere WAV.
+- Tambem e aceito `tts_manifest.json` no diretorio do motor.

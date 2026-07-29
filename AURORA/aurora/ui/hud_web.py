@@ -15,6 +15,8 @@ from aurora.core.conversations import ConversationStore, StoredMessage
 from aurora.core.runtime import AuroraRuntime
 from aurora.ui.hud_dashboard import build_hud_snapshot, hud_response_text, speech_excerpt
 from aurora.voice.factory import build_voice_session
+from aurora.voice.tts.piper_engine import AudioCache
+from aurora.voice.voice_manager import VoiceManager
 
 
 class ChatJobManager:
@@ -159,9 +161,9 @@ button,input {{ font:inherit; }}
 .metric,.nav,.chat,.side,.bubble,.btn,.command-wrap,.module,.task,.choice {{ background:var(--panel); border:1px solid var(--line); box-shadow:0 0 24px rgba(37,230,255,.055), inset 0 0 18px rgba(37,230,255,.025); backdrop-filter:blur(14px); }}
 .metric {{ padding:9px 12px; min-width:92px; border-radius:8px; }}
 .metric b {{ display:block; color:var(--teal); font-size:14px; margin-top:4px; }}
-.shell {{ display:grid; grid-template-columns:238px minmax(0,1fr) 340px; gap:14px; min-height:0; }}
+.shell {{ display:grid; grid-template-columns:238px minmax(0,1fr) 340px; gap:14px; height:100%; min-height:0; overflow:hidden; }}
 .nav,.side,.chat {{ border-radius:8px; }}
-.nav,.side {{ padding:16px; }}
+.nav,.side {{ padding:16px; min-height:0; overflow:auto; }}
 .nav button {{ width:100%; position:relative; display:flex; align-items:center; gap:10px; color:var(--cyan); padding:12px; margin-top:8px; font-weight:750; text-align:left; background:transparent; border:1px solid transparent; border-radius:7px; cursor:pointer; }}
 .nav button:before {{ content:""; width:7px; height:7px; border-radius:50%; background:currentColor; box-shadow:0 0 14px currentColor; }}
 .nav button:hover,.nav button.active {{ background:rgba(37,230,255,.11); border-color:rgba(37,230,255,.36); }}
@@ -176,15 +178,16 @@ button,input {{ font:inherit; }}
 .mini-item b {{ color:var(--cyan); font-size:12px; }}
 .mini-item span,.empty {{ color:var(--muted); font-size:11px; margin-top:3px; }}
 .nav-meta {{ margin-top:18px; padding-top:14px; border-top:1px solid rgba(37,230,255,.18); color:var(--muted); font-size:12px; line-height:1.55; }}
-.chat {{ background:var(--panel2); padding:16px; display:flex; flex-direction:column; min-width:0; }}
+.chat {{ background:var(--panel2); padding:16px; display:flex; flex-direction:column; min-width:0; min-height:0; height:100%; overflow:hidden; }}
 .channel-head {{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:12px; }}
 .status {{ font-weight:750; font-size:14px; color:var(--teal); border:1px solid rgba(32,255,200,.32); padding:8px 12px; border-radius:999px; }}
 .status.busy {{ color:var(--warn); border-color:rgba(255,180,84,.42); }}
 .status.busy:after {{ content:""; display:inline-block; width:6px; height:6px; margin-left:8px; border-radius:50%; background:currentColor; animation:blink 1s infinite; }}
-.workspace {{ overflow:auto; flex:1; min-height:0; padding-right:6px; }}
-.messages {{ display:block; }}
-.panel {{ display:none; animation:rise .18s ease-out; }}
-.panel.active {{ display:block; }}
+.workspace {{ overflow:hidden; flex:1; min-height:0; display:flex; }}
+.messages {{ flex:1; min-height:0; overflow-y:auto; overflow-x:hidden; padding:0 6px 2px 0; scroll-behavior:smooth; }}
+.panel {{ display:none; animation:rise .18s ease-out; min-height:0; height:100%; }}
+.panel.active {{ display:block; width:100%; overflow:auto; padding-right:6px; }}
+#conversa.panel.active {{ display:flex; flex:1; flex-direction:column; overflow:hidden; padding-right:0; }}
 .bubble {{ position:relative; padding:14px 15px; margin:0 0 12px; border-color:var(--cyan); background:rgba(3,9,14,.72); white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.48; border-radius:8px; }}
 .bubble:after {{ content:""; position:absolute; left:0; top:12px; bottom:12px; width:2px; background:currentColor; box-shadow:0 0 18px currentColor; }}
 .bubble b {{ display:block; color:var(--cyan); font-size:11px; margin-bottom:6px; }}
@@ -297,6 +300,8 @@ input {{ flex:1; min-width:0; background:rgba(3,10,16,.92); border:1px solid rgb
             <section class="module"><h3>Microfone</h3><p id="micInfo">Ditado web aguardando permissao do navegador.</p></section>
             <section class="module"><h3>Modelo</h3><p>{snapshot["coding_model"]}</p></section>
             <section class="module"><h3>Rede</h3><p>{"Ativa" if snapshot["internet_enabled"] else "Offline por politica"}</p></section>
+            <section class="module"><h3>Configuracoes de Voz</h3><p id="voiceSettings">Carregue o diagnostico para ver motor, cache, interrupcao e dispositivos.</p></section>
+            <section class="module"><h3>Acoes de Voz</h3><button class="choice" id="voiceDiag" type="button">Verificar modelos</button><button class="choice" id="clearVoiceCache" type="button">Limpar cache</button></section>
           </div>
         </div>
         <div id="favoritos" class="panel"><div class="task"><div><b>Favoritos</b><p>Estrutura preparada para projetos e conversas favoritas.</p></div><span>LOCAL</span></div></div>
@@ -347,6 +352,11 @@ function setStatus(text, busy=false) {{
   statusEl.textContent = text;
   statusEl.classList.toggle("busy", busy);
 }}
+function scrollMessagesToBottom() {{
+  window.requestAnimationFrame(() => {{
+    messages.scrollTop = messages.scrollHeight;
+  }});
+}}
 function add(author, text, cls="", meta=null) {{
   const div = document.createElement("div");
   div.className = "bubble " + cls;
@@ -371,12 +381,12 @@ function add(author, text, cls="", meta=null) {{
     div.appendChild(actions);
   }}
   messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
+  scrollMessagesToBottom();
 }}
 function selectPanel(name) {{
   document.querySelectorAll(".panel").forEach(panel => panel.classList.toggle("active", panel.id === name));
   document.querySelectorAll(".nav button[data-panel]").forEach(btn => btn.classList.toggle("active", btn.dataset.panel === name));
-  if (name === "conversa") messages.scrollTop = messages.scrollHeight;
+  if (name === "conversa") scrollMessagesToBottom();
 }}
 function play(url) {{
   if (!url) return;
@@ -512,6 +522,18 @@ document.getElementById("voice").onclick = async () => {{
   setStatus(data.ok ? "Voz natural acionada; Piper fica como fallback" : data.error);
   speakNatural("ISIS voz natural ativa no navegador. Piper local permanece como reserva.", data.audio_url);
 }};
+document.getElementById("voiceDiag").onclick = async () => {{
+  const res = await fetch("/api/voice-status");
+  const data = await res.json();
+  const engines = (data.engines || []).map(item => `${{item.name}}=${{item.available ? "ok" : "off"}}`).join(", ");
+  document.getElementById("voiceSettings").textContent = `Motor: ${{data.tts_engine}} | STT: ${{data.stt_engine}} | Cache: ${{data.audio_cache_enabled ? "on" : "off"}} | Interrupcao: ${{data.allow_interruption ? "on" : "off"}} | ${{engines}}`;
+  setStatus(data.ok === false ? "Falha no diagnostico de voz" : "Diagnostico de voz atualizado");
+}};
+document.getElementById("clearVoiceCache").onclick = async () => {{
+  const res = await fetch("/api/voice-cache-clear", {{ method:"POST" }});
+  const data = await res.json();
+  setStatus(data.ok ? `Cache de voz limpo: ${{data.removed}} arquivos` : (data.error || "Falha ao limpar cache"));
+}};
 document.getElementById("mic").onclick = () => {{
   if (!recognition && !setupMic()) {{ setStatus("Microfone do navegador indisponivel"); return; }}
   if (listening) recognition.stop();
@@ -555,6 +577,7 @@ document.querySelectorAll("[data-conversation]").forEach(btn => btn.onclick = as
   messages.innerHTML = "";
   (data.conversation.messages || []).forEach(msg => add(msg.role === "user" ? "Voce" : "ISIS", msg.content, msg.role === "user" ? "user" : "isis", msg.model ? `Modelo: ${{msg.model}}` : null));
   selectPanel("conversa");
+  scrollMessagesToBottom();
   setStatus("Conversa carregada");
 }});
 document.getElementById("sideSearch").onkeydown = async e => {{
@@ -603,6 +626,9 @@ class HudWebServer:
                 if parsed.path == "/api/chat-status":
                     self._chat_status(parse_qs(parsed.query).get("id", [""])[0])
                     return
+                if parsed.path == "/api/voice-status":
+                    self._voice_status()
+                    return
                 if parsed.path == "/api/conversations":
                     self._send_json({"ok": True, "conversations": state.store.list_conversations()})
                     return
@@ -626,6 +652,9 @@ class HudWebServer:
                     return
                 if self.path == "/api/voice-test":
                     self._voice_test()
+                    return
+                if self.path == "/api/voice-cache-clear":
+                    self._voice_cache_clear()
                     return
                 if self.path == "/api/projects":
                     self._create_project()
@@ -685,6 +714,19 @@ class HudWebServer:
                 try:
                     audio_url = state._synthesize_url("ISIS voz local ativa. Interface web operacional.")
                     self._send_json({"ok": True, "audio_url": audio_url})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _voice_status(self) -> None:
+                try:
+                    self._send_json({"ok": True, **VoiceManager(state.runtime.config, state.runtime.audit).status()})
+                except Exception as exc:
+                    self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+            def _voice_cache_clear(self) -> None:
+                try:
+                    cache = AudioCache(Path(state.runtime.config.paths.cache_dir) / "audio", max_files=state.runtime.config.voice.audio_cache_max_files)
+                    self._send_json({"ok": True, "removed": cache.clear(), "cache_dir": str(cache.cache_dir)})
                 except Exception as exc:
                     self._send_json({"ok": False, "error": str(exc)}, HTTPStatus.INTERNAL_SERVER_ERROR)
 

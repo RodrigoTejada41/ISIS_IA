@@ -38,6 +38,8 @@ from aurora.voice.audio import AudioInputManager, AudioOutputManager
 from aurora.voice.factory import build_voice_session
 from aurora.voice.providers import MockSpeechToTextProvider, MockTextToSpeechProvider, MockWakeWordProvider
 from aurora.voice.session import VoiceSessionManager
+from aurora.voice.tts.piper_engine import AudioCache
+from aurora.voice.voice_manager import VoiceManager
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -211,6 +213,11 @@ def build_parser() -> argparse.ArgumentParser:
     voice_speak.add_argument("text")
     voice_speak.add_argument("--play", action="store_true")
     sub.add_parser("voice-status")
+    voice_test = sub.add_parser("voice-test")
+    voice_test.add_argument("text", nargs="?", default="Bom dia, Rodrigo. Estou pronta para ajudar.")
+    voice_test.add_argument("--play", action="store_true")
+    sub.add_parser("voice-cache-clear")
+    sub.add_parser("voice-benchmark")
 
     return parser
 
@@ -668,22 +675,15 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.command == "voice-status":
+        manager = VoiceManager(runtime.config, runtime.audit)
+        status = manager.status()
         piper_binary = Path(runtime.config.voice.piper_binary_path)
         piper_voice = Path(runtime.config.voice.piper_voice_path)
-        print(
-            json.dumps(
-                {
-                    "stt_engine": runtime.config.voice.stt_engine,
-                    "tts_engine": runtime.config.voice.tts_engine,
-                    "selected_voice": runtime.config.voice.selected_voice,
-                    "piper_binary_exists": piper_binary.exists(),
-                    "piper_voice_exists": piper_voice.exists(),
-                    "microphone_enabled": runtime.config.privacy.microphone_enabled,
-                    "response_mode": runtime.config.voice.response_mode,
-                },
-                ensure_ascii=False,
-            )
-        )
+        status["piper_binary_exists"] = piper_binary.exists()
+        status["piper_voice_exists"] = piper_voice.exists()
+        status["microphone_enabled"] = runtime.config.privacy.microphone_enabled
+        status["response_mode"] = runtime.config.voice.response_mode
+        print(json.dumps(status, ensure_ascii=False))
         return 0
 
     if args.command == "voice-speak":
@@ -693,6 +693,37 @@ def main(argv: list[str] | None = None) -> int:
             session.audio_out.enqueue(output)
             session.audio_out.play_next()
         print(json.dumps({"audio_path": str(output), "tts_engine": runtime.config.voice.tts_engine, "played": args.play}, ensure_ascii=False))
+        return 0
+
+    if args.command == "voice-test":
+        manager = VoiceManager(runtime.config, runtime.audit)
+        print(json.dumps(manager.speak(args.text, play=args.play), ensure_ascii=False))
+        return 0
+
+    if args.command == "voice-cache-clear":
+        cache = AudioCache(Path(runtime.config.paths.cache_dir) / "audio", max_files=runtime.config.voice.audio_cache_max_files)
+        print(json.dumps({"removed": cache.clear(), "cache_dir": str(cache.cache_dir)}, ensure_ascii=False))
+        return 0
+
+    if args.command == "voice-benchmark":
+        manager = VoiceManager(runtime.config, runtime.audit)
+        rows = []
+        for engine in manager.router.engines:
+            info = engine.info()
+            row = {"engine": info.name, "voice": info.voice, "available": info.available, "status": "unavailable", "error": info.error}
+            if info.available:
+                result = manager.router.synthesize("Bom dia, Rodrigo. Estou pronta para ajudar.", emotion="friendly")
+                if result:
+                    row.update({"status": "ok", "elapsed_ms": result.elapsed_ms, "audio_path": str(result.audio_path), "cached": result.cached})
+            rows.append(row)
+        logs = Path(runtime.config.paths.logs_dir)
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / "voice_benchmark.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+        md = ["# Voice benchmark", "", "| Motor | Voz | Disponivel | Status | Tempo ms | Erro |", "|---|---|---:|---|---:|---|"]
+        for row in rows:
+            md.append(f"| {row.get('engine','')} | {row.get('voice','')} | {row.get('available')} | {row.get('status','')} | {row.get('elapsed_ms','')} | {row.get('error','')} |")
+        (logs / "voice_benchmark.md").write_text("\n".join(md), encoding="utf-8")
+        print(json.dumps({"rows": rows, "json": str(logs / "voice_benchmark.json"), "markdown": str(logs / "voice_benchmark.md")}, ensure_ascii=False))
         return 0
 
     return 1

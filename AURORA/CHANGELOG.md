@@ -532,3 +532,25 @@
 - Corrigido footer do HUD web oculto apos respostas longas.
 - Campo de comando, `MIC`, `ENVIAR` e `PARAR` permanecem visiveis no desktop.
 - HUD devolve foco ao input apos conclusao, cancelamento ou erro do job.
+
+## 0.6.7 - 2026-07-28
+
+- Adicionada arquitetura modular de voz local.
+- Adicionado roteador TTS com fallback automatico.
+- Piper permanece fallback offline validado.
+- Kokoro e Chatterbox adicionados como opcionais aguardando modelo pt-BR validado.
+- Adicionados cache de audio, normalizador PT-BR, VAD inicial, interrupcao e fila de fala.
+- Adicionados comandos `voice-test`, `voice-cache-clear` e `voice-benchmark`.
+- HUD web recebeu diagnostico de voz e limpeza de cache.
+
+## 0.6.8 - 2026-07-28
+
+- Corrigida rolagem da area de conversa do HUD web.
+- Mensagens agora sobem em fluxo de chat e `#messages` possui scrollbar propria.
+- Conversas carregadas e novas mensagens rolam automaticamente para o final.
+
+## 0.6.9 - 2026-07-28
+
+- Kokoro e Chatterbox deixam de ser stubs sempre indisponiveis.
+- Adicionado adaptador TTS por CLI/manifesto local para motores offline compativeis.
+- Adicionados campos `kokoro_command`, `kokoro_model_dir`, `kokoro_voice`, `chatterbox_command`, `chatterbox_model_dir` e `chatterbox_voice`.

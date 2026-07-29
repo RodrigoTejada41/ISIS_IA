@@ -53,3 +53,15 @@
 - Decisao: no desktop, o HUD web ocupa `height:100vh` e apenas a area central de conversa rola.
 - Motivo: respostas longas nao podem ocultar a barra de digitar, `MIC`, `ENVIAR` e `PARAR`.
 - Consequencia: o footer permanece visivel e o input recebe foco apos conclusao, cancelamento ou erro do job.
+
+## 2026-07-28 - Arquitetura modular de voz local
+
+- Decisao: criar `VoiceManager` e `VoiceRouter` com Piper como fallback validado e Kokoro/Chatterbox como motores opcionais indisponiveis ate validacao local.
+- Motivo: nao ha modelo Kokoro/Chatterbox pt-BR validado no workspace; definir qualquer um como padrao seria afirmacao nao comprovada.
+- Consequencia: a ISIS ganha fallback, cache, normalizacao, benchmark e diagnostico sem perder a voz Piper funcional.
+
+## 2026-07-28 - Compatibilidade Kokoro/Chatterbox
+
+- Decisao: Kokoro e Chatterbox nao sao rejeitados; sao adaptadores compativeis via comando local ou `tts_manifest.json`.
+- Motivo: o usuario quer manter esses motores elegiveis, mas ainda sem inventar pacote/modelo pt-BR nao validado.
+- Consequencia: quando houver instalacao local configurada, o roteador usa Kokoro/Chatterbox antes do fallback Piper.

@@ -1274,3 +1274,85 @@ Validacao:
 
 - `python -m py_compile aurora\ui\hud_web.py`.
 - `python -m pytest tests\test_phase48_operational_hud.py -q --basetemp .tmp\pytest-hud-footer`: 4 passed.
+
+## 2026-07-28 - Voz local modular
+
+Pedido:
+
+- Implementar base de voz feminina natural, gratuita, offline, com fallback, cache, STT local preparado, interrupcao e configuracao.
+
+Backup:
+
+- Criado backup previo em `backups\manual\voice_architecture_20260728_224115`.
+
+Alteracoes:
+
+- Criado `VoiceManager` e `VoiceRouter`.
+- Criados subpacotes `aurora.voice.tts` e `aurora.voice.stt`.
+- Piper foi adaptado como engine modular e fallback local.
+- Kokoro e Chatterbox foram registrados como engines opcionais indisponiveis ate validacao local real de modelo pt-BR.
+- Criado `AudioCache` por hash de texto normalizado, motor, voz, velocidade e emocao.
+- Criado `PortugueseSpeechNormalizer`.
+- Criado `SpeechQueue`, `VoiceActivityDetector` e `InterruptionManager`.
+- HUD web recebeu diagnostico de voz e limpeza de cache.
+- CLI recebeu `voice-test`, `voice-cache-clear` e `voice-benchmark`.
+- Criadas docs `VOICE_ARCHITECTURE`, `VOICE_INSTALLATION`, `VOICE_CONFIGURATION`, `VOICE_TROUBLESHOOTING`, `VOICE_BENCHMARK` e `VOICE_CHANGELOG`.
+
+Limitacoes:
+
+- Nao foi definido Kokoro/Chatterbox como padrao porque nao ha pacote/modelo pt-BR validado localmente nesta sessao.
+- STT server-side real continua dependendo de binario/modelo `whisper.cpp` configurado.
+- Medicao RAM/VRAM do benchmark fica pendente ate motor neural local estar instalado.
+
+Validacao:
+
+- `python -m py_compile` nos modulos de voz, HUD, CLI e config.
+- `python -m pytest tests\test_voice_architecture.py tests\test_voice.py tests\test_local_voice_providers.py tests\test_phase47_voice_hud.py tests\test_phase48_operational_hud.py -q --basetemp .tmp\pytest-voice-architecture`: 16 passed.
+- `python -m aurora.cli voice-status`: Piper disponivel, Kokoro/Chatterbox indisponiveis sem modelo local.
+- `python -m aurora.cli voice-test "Bom dia, Rodrigo. Estou pronta para ajudar."`: WAV gerado via Piper em 2027 ms.
+- Segunda execucao de `voice-test`: cache hit em 1 ms.
+- `python -m aurora.cli voice-benchmark`: gerou `D:\ISIS_IA\ISIS\logs\voice_benchmark.json` e `.md`.
+- HUD reiniciado em `http://127.0.0.1:8765/`; `/api/voice-status` retornou status dos motores.
+
+## 2026-07-28 - Rolagem da conversa HUD web
+
+Diagnostico:
+
+- Usuario relatou que a tela de mensagens nao tinha barra de rolagem e nao se comportava como chat.
+- O container rolavel era `workspace`, mas a lista `#messages` nao tinha `overflow-y:auto` nem altura flex.
+
+Alteracoes:
+
+- `workspace` passa a conter paineis sem rolar diretamente.
+- `#conversa.panel.active` passa a ser flex column.
+- `#messages` recebe `overflow-y:auto`, `min-height:0` e scroll proprio.
+- Adicionado `scrollMessagesToBottom()` para novas mensagens e carregamento de historico.
+
+Validacao:
+
+- `python -m py_compile aurora\ui\hud_web.py`.
+- `python -m pytest tests\test_phase48_operational_hud.py -q --basetemp .tmp\pytest-hud-scroll`: 4 passed.
+- HUD web reiniciado em `http://127.0.0.1:8765/`.
+- Playwright com 80 mensagens artificiais: `overflowY=auto`, `clientHeight=433`, `scrollHeight=13071`, `hasScrollbar=true`, `atBottom=true`.
+
+## 2026-07-28 - Compatibilidade Kokoro/Chatterbox
+
+Diagnostico:
+
+- Usuario corrigiu a interpretacao: Kokoro e Chatterbox nao devem ser tratados como rejeitados.
+- O codigo anterior registrava esses motores como stubs sempre indisponiveis.
+
+Alteracoes:
+
+- Criado `ExternalCliTTSEngine`.
+- Kokoro e Chatterbox agora herdam do adaptador CLI local.
+- Configuracao aceita `kokoro_command`, `kokoro_model_dir`, `kokoro_voice`, `chatterbox_command`, `chatterbox_model_dir` e `chatterbox_voice`.
+- Tambem e aceito `tts_manifest.json` no diretorio do motor.
+
+Validacao:
+
+- `python -m py_compile aurora\voice\tts\external_cli_engine.py aurora\voice\tts\kokoro_engine.py aurora\voice\tts\chatterbox_engine.py aurora\voice\tts\tts_factory.py aurora\core\config.py`.
+- `python -m pytest tests\test_voice_architecture.py -q --basetemp .tmp\pytest-voice-compat`: 5 passed.
+- `python -m pytest tests\test_voice_architecture.py tests\test_voice.py tests\test_local_voice_providers.py tests\test_phase47_voice_hud.py -q --basetemp .tmp\pytest-voice-compat-full`: 13 passed.
+- `python -m pytest -q --basetemp .tmp\pytest-full-after-voice-compat`: 168 passed.
+- `python -m aurora.cli voice-status`: Kokoro/Chatterbox aparecem como compativeis, aguardando comando local configurado; Piper segue disponivel.

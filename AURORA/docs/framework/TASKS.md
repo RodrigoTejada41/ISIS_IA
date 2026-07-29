@@ -19,11 +19,15 @@
 - Conversas do HUD web sao salvas em SQLite.
 - Barra lateral mostra projetos e conversas recentes.
 - Botoes de copiar, tentar novamente e editar pergunta foram adicionados nas respostas.
+- Criada arquitetura modular de voz local com fallback Piper, cache, normalizador PT-BR, fila e diagnostico.
+- Kokoro/Chatterbox agora possuem adaptador compativel via comando local ou `tts_manifest.json`.
 
 ## Pendente
 
 - Validacao visual final do usuario no navegador com `Ctrl+F5`.
 - STT server-side real com `whisper.cpp` continua pendente; o microfone atual usa API do navegador.
+- Validar qualidade/pronuncia Kokoro/Chatterbox com modelo pt-BR real antes de trocar o motor padrao.
+- Medir RAM/VRAM do benchmark de voz com motor neural instalado.
 - Envio real de anexos ao modelo continua pendente; selecao local ja funciona.
 - Exportacao, arquivamento, favoritos e lixeira ainda estao preparados visualmente, mas exigem endpoints especificos.
 - Continuar embeddings pendentes do indice grande de projetos.

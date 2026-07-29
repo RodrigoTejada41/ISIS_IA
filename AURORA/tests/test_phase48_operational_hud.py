@@ -57,9 +57,14 @@ def test_web_hud_html_contains_operational_endpoints():
     assert "window.setTimeout(() => sendPrompt(), 150)" in html
     assert ".app { position:relative; height:100vh; min-height:0;" in html
     assert "grid-template-rows:78px minmax(0,1fr) 74px" in html
-    assert ".workspace { overflow:auto; flex:1; min-height:0;" in html
+    assert ".shell { display:grid; grid-template-columns:238px minmax(0,1fr) 340px; gap:14px; height:100%; min-height:0; overflow:hidden;" in html
+    assert ".chat { background:var(--panel2); padding:16px; display:flex; flex-direction:column; min-width:0; min-height:0; height:100%; overflow:hidden;" in html
+    assert ".workspace { overflow:hidden; flex:1; min-height:0; display:flex;" in html
     assert "function unlockInput()" in html
     assert "window.setTimeout(() => input.focus(), 0)" in html
+    assert ".messages { flex:1; min-height:0; overflow-y:auto;" in html
+    assert "#conversa.panel.active { display:flex; flex:1; flex-direction:column; overflow:hidden;" in html
+    assert "function scrollMessagesToBottom()" in html
     assert "Embeddings de projetos:" not in html
     assert "Memoria local pronta para consulta" in html
     assert "qwen3-coder:30b" in html

@@ -20,8 +20,27 @@ class VoiceSettings(BaseModel):
     tts_engine: str = "mock"
     piper_binary_path: str = ""
     piper_voice_path: str = ""
+    kokoro_model_dir: str = r"D:\ISIS_IA\ISIS\models\voice\kokoro"
+    kokoro_command: list[str] = Field(default_factory=list)
+    kokoro_voice: str = ""
+    chatterbox_model_dir: str = r"D:\ISIS_IA\ISIS\models\voice\chatterbox"
+    chatterbox_command: list[str] = Field(default_factory=list)
+    chatterbox_voice: str = ""
     selected_voice: str = "pt-BR-female-mock"
     response_mode: str = "text_and_voice"
+    output_device: str = ""
+    microphone_device: str = ""
+    speed: float = 1.0
+    volume: float = 1.0
+    microphone_sensitivity: float = 0.02
+    recognition_profile: str = "fast"
+    allow_interruption: bool = True
+    use_gpu: bool = True
+    preload_models: bool = False
+    keep_model_loaded: bool = False
+    audio_cache_enabled: bool = True
+    audio_cache_max_files: int = 200
+    strict_offline: bool = True
 
 
 class ObsidianSettings(BaseModel):
