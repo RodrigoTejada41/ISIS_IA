@@ -1,0 +1,52 @@
+PADRÃO DE USO DE IA
+
+PRINCÍPIO
+A IA deve trabalhar com base nos documentos do projeto, e não apenas no histórico da conversa.
+
+ANTES DE PROGRAMAR
+1. Ler 00_MASTER.txt.
+2. Ler visão geral.
+3. Ler SPEC.
+4. Ler arquitetura.
+5. Ler decisões.
+6. Ler bugs e soluções.
+7. Confirmar escopo.
+8. Criar plano.
+
+DURANTE
+- Alterar somente o necessário.
+- Informar riscos encontrados.
+- Não inventar APIs, arquivos ou comportamentos.
+- Verificar o código existente antes de substituir.
+- Preservar compatibilidade.
+- Atualizar testes.
+- Registrar decisões.
+
+NO FINAL
+- Resumir o que foi feito.
+- Informar arquivos alterados.
+- Informar testes.
+- Registrar problemas e soluções.
+- Atualizar ponto de retomada.
+
+USO DOS MODELOS
+Luna:
+- Documentação simples.
+- Organização.
+- Resumos.
+- Templates.
+
+Terra:
+- Desenvolvimento cotidiano.
+- Correções localizadas.
+- Testes e integração.
+
+Sol:
+- Arquitetura.
+- Auditoria.
+- Segurança.
+- Refatoração ampla.
+- Diagnóstico complexo.
+
+Observação:
+Os nomes, disponibilidade e características dos modelos podem mudar. Confirmar na ferramenta antes de definir custo ou capacidade.

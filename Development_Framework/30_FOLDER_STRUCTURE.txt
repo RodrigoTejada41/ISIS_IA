@@ -1,0 +1,34 @@
+ESTRUTURA RECOMENDADA
+
+/docs
+  /architecture
+  /specs
+  /requirements
+  /decisions
+  /sessions
+  /bugs
+  /releases
+  /security
+  /database
+  /api
+  /ui-ux
+
+/src
+/tests
+/scripts
+/config
+/migrations
+/deploy
+/backups
+
+ARQUIVOS NA RAIZ
+00_MASTER.txt
+PROJECT_OVERVIEW.txt
+README.md
+CHANGELOG.txt
+ROADMAP.txt
+TASKS.txt
+AGENTS.md
+
+REGRA
+A estrutura pode ser adaptada, mas a localização dos documentos essenciais deve ser previsível.

@@ -1,0 +1,22 @@
+PADRÃO DE PERFORMANCE
+
+ANTES DE OTIMIZAR
+- Medir.
+- Identificar gargalo.
+- Registrar cenário.
+- Definir meta.
+
+VERIFICAR
+- Consultas lentas.
+- Índices.
+- N+1.
+- Memória.
+- CPU.
+- Rede.
+- Tamanho de payload.
+- Cache.
+- Processamento em lote.
+- Inicialização.
+
+REGRA
+Não adicionar complexidade de performance sem evidência de necessidade.

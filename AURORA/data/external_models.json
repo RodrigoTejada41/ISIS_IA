@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ternary-bonsai-27b-q2",
+    "source": "huggingface",
+    "repo": "prism-ml/Ternary-Bonsai-27B-gguf",
+    "path": "D:\\ISIS_IA\\ISIS\\models\\huggingface\\prism-ml\\Ternary-Bonsai-27B-gguf\\Ternary-Bonsai-27B-Q2_0.gguf",
+    "format": "GGUF",
+    "size_gb": 6.67,
+    "runtime": "llama.cpp",
+    "status": "BLOCKED",
+    "reason": "GGUF checksum ok, but Ollama fails with tensor size overflow and llama.cpp b10173 fails with tensor offset mismatch."
+  },
+  {
+    "id": "kat-coder-v2.5-dev",
+    "source": "huggingface",
+    "repo": "Kwaipilot/KAT-Coder-V2.5-Dev",
+    "path": "D:\\ISIS_IA\\ISIS\\models\\huggingface\\Kwaipilot\\KAT-Coder-V2.5-Dev",
+    "format": "Transformers safetensors",
+    "size_gb": 64.59,
+    "runtime": "vLLM/SGLang/KTransformers",
+    "status": "DELETED",
+    "reason": "Deleted by user request after installing compatible qwen3-coder:30b in Ollama."
+  }
+]

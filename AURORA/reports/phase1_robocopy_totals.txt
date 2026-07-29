@@ -1,0 +1,11 @@
+﻿
+
+------------------------------------------------------------------------------
+
+                Total    Copiada  IgnoradaIncompatibilidade     FALHA    Extras
+Diretórios:      12309      12309         0         0         0         0
+ Arquivos:     203112     203112         0         0         0         0
+    Bytes: 5286560147 5286560147         0         0         0         0
+N.º de Vezes:    0:00:04    0:00:00                       0:00:00   0:00:04
+   Finalizado em: terça-feira, 28 de julho de 2026 15:22:06
+

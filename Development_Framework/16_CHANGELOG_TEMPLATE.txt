@@ -1,0 +1,25 @@
+CHANGELOG
+
+Formato recomendado:
+[versão] - AAAA-MM-DD
+
+ADICIONADO
+- 
+
+ALTERADO
+- 
+
+CORRIGIDO
+- 
+
+REMOVIDO
+- 
+
+SEGURANÇA
+- 
+
+MIGRAÇÃO
+- 
+
+OBSERVAÇÕES
+-

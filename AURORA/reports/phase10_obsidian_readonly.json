@@ -1,0 +1,19 @@
+{
+  "vault": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo",
+  "database": "D:\\ISIS_IA\\ISIS\\data\\databases\\obsidian_readonly.sqlite",
+  "scan": {
+    "notes": 10
+  },
+  "store": {
+    "created": 0,
+    "updated": 0,
+    "unchanged": 10,
+    "total": 10
+  },
+  "stats": {
+    "notes": 83194,
+    "checklist_total": 48624,
+    "checklist_done": 289
+  },
+  "status": "indexed"
+}

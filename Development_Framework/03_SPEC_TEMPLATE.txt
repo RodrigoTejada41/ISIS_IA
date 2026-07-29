@@ -1,0 +1,67 @@
+SOFTWARE SPECIFICATION — SPEC
+
+Título:
+Identificador:
+Versão:
+Autor:
+Data:
+Status:
+
+1. CONTEXTO
+Explique a necessidade.
+
+2. PROBLEMA
+Descreva o comportamento atual e o problema observado.
+
+3. OBJETIVO
+Descreva o resultado esperado.
+
+4. ESCOPO
+Incluído:
+Não incluído:
+
+5. REQUISITOS
+Liste requisitos relacionados.
+
+6. FLUXO FUNCIONAL
+Descreva o fluxo passo a passo.
+
+7. REGRAS DE NEGÓCIO
+Liste regras e exceções.
+
+8. IMPACTO TÉCNICO
+Frontend:
+Backend:
+Banco:
+API:
+Infraestrutura:
+Segurança:
+
+9. ESTRUTURAS DE DADOS
+Tabelas:
+Campos:
+Índices:
+Relacionamentos:
+
+10. INTERFACE
+Telas:
+Estados:
+Validações:
+Mensagens:
+
+11. TESTES
+Casos positivos:
+Casos negativos:
+Regressão:
+Permissões:
+
+12. CRITÉRIOS DE ACEITE
+- Critério 1
+- Critério 2
+- Critério 3
+
+13. ROLLBACK
+Descreva como desfazer a alteração.
+
+14. PENDÊNCIAS
+Liste decisões abertas.

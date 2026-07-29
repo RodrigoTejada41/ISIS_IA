@@ -1,0 +1,29 @@
+ROADMAP
+
+VISÃO
+
+FASE 1 — FUNDAÇÃO
+Objetivo:
+Entregas:
+Critérios:
+
+FASE 2 — MVP
+Objetivo:
+Entregas:
+Critérios:
+
+FASE 3 — ESTABILIZAÇÃO
+Objetivo:
+Entregas:
+Critérios:
+
+FASE 4 — ESCALA
+Objetivo:
+Entregas:
+Critérios:
+
+BACKLOG FUTURO
+
+DEPENDÊNCIAS
+
+RISCOS

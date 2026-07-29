@@ -1,0 +1,64 @@
+MOVISYS DEVELOPMENT FRAMEWORK — MDF
+
+FINALIDADE
+Este framework define o padrão oficial para criação, manutenção, retomada, revisão e publicação de qualquer projeto de software da MoviSys.
+
+REGRA PRINCIPAL
+Antes de alterar código, qualquer pessoa ou IA deve:
+1. Ler este arquivo.
+2. Ler o estado atual do projeto.
+3. Ler as especificações relacionadas à tarefa.
+4. Consultar decisões técnicas anteriores.
+5. Consultar bugs conhecidos e lições aprendidas.
+6. Criar ou atualizar o plano da tarefa.
+7. Só então iniciar alterações.
+
+ORDEM PADRÃO DE TRABALHO
+1. Entendimento do problema.
+2. Levantamento de requisitos.
+3. Criação ou atualização da SPEC.
+4. Análise de impacto.
+5. Planejamento técnico.
+6. Implementação.
+7. Testes.
+8. Revisão.
+9. Atualização da documentação.
+10. Registro de sessão.
+11. Registro de problemas e soluções.
+12. Preparação para entrega.
+
+PRINCÍPIOS
+- Não alterar funcionalidades fora do escopo.
+- Não remover comportamento existente sem autorização.
+- Não mascarar erros.
+- Não ignorar falhas de segurança.
+- Não concluir tarefa sem validação.
+- Não repetir erro já documentado.
+- Não depender apenas da memória da conversa.
+- Toda decisão relevante deve ser registrada.
+- Toda alteração importante deve ser rastreável.
+- Toda sessão deve terminar com ponto exato de retomada.
+
+DOCUMENTOS OBRIGATÓRIOS POR PROJETO
+- PROJECT_OVERVIEW.txt
+- REQUIREMENTS.txt
+- ROADMAP.txt
+- ARCHITECTURE.txt
+- DATABASE.txt
+- API.txt
+- UI_UX.txt
+- TASKS.txt
+- SESSION_LOG.txt
+- DECISION_LOG.txt
+- BUGS_AND_SOLUTIONS.txt
+- CHANGELOG.txt
+- RELEASE_CHECKLIST.txt
+
+CRITÉRIO DE CONCLUSÃO
+Uma tarefa só pode ser considerada concluída quando:
+- O requisito foi atendido.
+- O código foi revisado.
+- Os testes relevantes foram executados.
+- Não foram introduzidas regressões conhecidas.
+- A documentação foi atualizada.
+- A sessão foi registrada.

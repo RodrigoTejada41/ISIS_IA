@@ -1,0 +1,21 @@
+BACKUP E RECUPERAÇÃO
+
+DEFINIR
+- O que será copiado.
+- Frequência.
+- Retenção.
+- Destino.
+- Criptografia.
+- Responsável.
+- Teste de restauração.
+
+ANTES DE ALTERAÇÕES CRÍTICAS
+1. Criar backup.
+2. Validar integridade.
+3. Registrar localização.
+4. Definir rollback.
+5. Executar mudança.
+6. Validar sistema.
+
+REGRA
+Backup sem teste de restauração não deve ser considerado suficiente.

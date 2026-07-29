@@ -1,0 +1,21 @@
+PADRÃO DE DEPENDÊNCIAS
+
+ANTES DE ADICIONAR
+- Verificar necessidade real.
+- Avaliar manutenção.
+- Avaliar licença.
+- Avaliar segurança.
+- Avaliar tamanho.
+- Avaliar compatibilidade.
+- Verificar alternativa nativa.
+
+REGISTRO
+Nome:
+Versão:
+Finalidade:
+Licença:
+Risco:
+Responsável:
+
+REGRA
+Toda dependência deve ter finalidade clara e versão controlada.

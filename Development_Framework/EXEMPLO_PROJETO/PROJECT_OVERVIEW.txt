@@ -1,0 +1,42 @@
+PROJECT OVERVIEW
+
+Nome do projeto:
+Código interno:
+Versão atual:
+Responsável:
+Data de início:
+Status:
+
+1. OBJETIVO
+Descreva o problema que o sistema resolve.
+
+2. PÚBLICO-ALVO
+Descreva os usuários e perfis.
+
+3. ESCOPO
+Liste o que faz parte do projeto.
+
+4. FORA DE ESCOPO
+Liste o que não será implementado nesta fase.
+
+5. MÓDULOS
+Liste os módulos do sistema.
+
+6. TECNOLOGIAS
+Frontend:
+Backend:
+Banco de dados:
+Infraestrutura:
+Integrações:
+
+7. RESTRIÇÕES
+Descreva limitações técnicas, legais, operacionais ou comerciais.
+
+8. CRITÉRIOS DE SUCESSO
+Defina resultados verificáveis.
+
+9. RISCOS PRINCIPAIS
+Liste riscos técnicos, financeiros e operacionais.
+
+10. ESTADO ATUAL
+Descreva o que já existe e o que ainda falta.

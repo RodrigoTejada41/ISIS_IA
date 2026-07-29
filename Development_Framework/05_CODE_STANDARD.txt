@@ -1,0 +1,34 @@
+PADRÃO DE CÓDIGO
+
+PRINCÍPIOS
+- Clareza acima de complexidade desnecessária.
+- Nomes explícitos.
+- Funções pequenas e focadas.
+- Evitar duplicação.
+- Evitar efeitos colaterais ocultos.
+- Tratar erros de forma explícita.
+- Validar entradas.
+- Documentar decisões não óbvias.
+
+CONVENÇÕES
+- Usar nomes consistentes no idioma definido pelo projeto.
+- Não misturar padrões de nomenclatura.
+- Não criar abreviações ambíguas.
+- Não comentar o óbvio.
+- Comentários devem explicar motivo, não repetir o código.
+
+PROIBIÇÕES
+- Código morto.
+- Credenciais fixas.
+- Exceções vazias.
+- Tratamento genérico sem log.
+- Funções gigantes.
+- Dependências sem justificativa.
+- Alterações fora do escopo.
+
+DEFINIÇÃO DE PRONTO
+- Compila ou executa.
+- Passa nos testes relevantes.
+- Não gera erro conhecido.
+- Está documentado.
+- Está rastreado no changelog ou sessão.

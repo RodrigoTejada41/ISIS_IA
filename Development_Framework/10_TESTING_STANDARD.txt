@@ -1,0 +1,34 @@
+PADRÃO DE TESTES
+
+TIPOS
+- Unitário.
+- Integração.
+- Funcional.
+- Interface.
+- Regressão.
+- Segurança.
+- Performance.
+- Aceite.
+
+PARA CADA FUNCIONALIDADE
+1. Caminho principal.
+2. Entradas inválidas.
+3. Campos obrigatórios.
+4. Permissões.
+5. Dados duplicados.
+6. Falha de rede.
+7. Falha de integração.
+8. Concorrência quando aplicável.
+9. Recuperação após erro.
+
+REGISTRO
+Caso:
+Pré-condições:
+Passos:
+Resultado esperado:
+Resultado obtido:
+Status:
+Evidência:
+
+REGRA
+Não marcar como concluído sem executar os testes diretamente relacionados.

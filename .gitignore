@@ -1,0 +1,50 @@
+# Python/cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.tmp/
+htmlcov/
+.coverage
+dist/
+build/
+*.egg-info/
+
+# Local automation/runtime
+.playwright-mcp/
+.playwright-cli/
+AURORA/.playwright-cli/
+AURORA/data/audit/
+*.log
+
+# ISIS runtime/data artifacts
+ISIS/models/
+ISIS/runtime/
+ISIS/brain/
+ISIS/backups/
+ISIS/quarantine/
+ISIS/logs/
+ISIS/data/
+ISIS/reports/
+ISIS/voice/piper/voices/
+ISIS/config/report_signing_key*.json
+ISIS/config/report_signing_key*_acl_*.txt
+
+# Media/output artifacts
+*.wav
+*.mp3
+*.mp4
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Local secrets/databases
+*.sqlite
+*.sqlite3
+*.db
+*.key
+*.pem
+*.pfx
+*.env
+*.env.*

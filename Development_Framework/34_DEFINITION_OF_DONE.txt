@@ -1,0 +1,18 @@
+DEFINITION OF DONE
+
+Uma funcionalidade está pronta somente quando:
+
+[ ] Requisito atendido
+[ ] Critérios de aceite validados
+[ ] Código revisado
+[ ] Testes relevantes executados
+[ ] Permissões verificadas
+[ ] Erros tratados
+[ ] Logs adequados
+[ ] Sem regressão conhecida
+[ ] Banco e migrações validados
+[ ] Documentação atualizada
+[ ] Changelog atualizado
+[ ] Registro de sessão atualizado
+[ ] Rollback definido quando necessário
+[ ] Resultado demonstrável

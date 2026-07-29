@@ -1,0 +1,38 @@
+TAREFA TÉCNICA
+
+ID:
+Título:
+Prioridade:
+Responsável:
+Status:
+Data:
+
+ORIGEM
+Requisito:
+SPEC:
+Bug:
+Solicitação:
+
+OBJETIVO
+
+ESCOPO
+
+FORA DE ESCOPO
+
+ARQUIVOS PROVÁVEIS
+
+DEPENDÊNCIAS
+
+PASSOS
+[ ] Análise
+[ ] Implementação
+[ ] Testes
+[ ] Revisão
+[ ] Documentação
+[ ] Registro de sessão
+
+CRITÉRIOS DE ACEITE
+
+RISCOS
+
+RESULTADO

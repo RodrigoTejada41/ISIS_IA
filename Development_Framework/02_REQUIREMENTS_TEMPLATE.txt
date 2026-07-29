@@ -1,0 +1,33 @@
+REQUISITOS DO PROJETO
+
+PADRÃO DE IDENTIFICAÇÃO
+RF-000: requisito funcional.
+RNF-000: requisito não funcional.
+RB-000: regra de negócio.
+
+REQUISITOS FUNCIONAIS
+RF-001:
+Descrição:
+Usuário:
+Pré-condições:
+Fluxo principal:
+Fluxos alternativos:
+Resultado esperado:
+Critério de aceite:
+
+REQUISITOS NÃO FUNCIONAIS
+RNF-001:
+Categoria:
+Descrição:
+Métrica:
+Critério de aceite:
+
+REGRAS DE NEGÓCIO
+RB-001:
+Descrição:
+Origem:
+Exceções:
+Impactos:
+
+REGRA
+Nenhum requisito deve ser considerado válido sem critério de aceite verificável.

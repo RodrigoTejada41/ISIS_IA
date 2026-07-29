@@ -1,0 +1,113 @@
+{
+  "assistant_name": "ISIS",
+  "language": "pt-BR",
+  "paths": {
+    "isis_root": "D:\\ISIS_IA\\ISIS",
+    "code_root": "D:\\ISIS_IA\\AURORA",
+    "models_dir": "D:\\ISIS_IA\\ISIS\\models",
+    "backups_dir": "D:\\ISIS_IA\\ISIS\\backups",
+    "logs_dir": "D:\\ISIS_IA\\ISIS\\logs",
+    "cache_dir": "D:\\ISIS_IA\\ISIS\\data\\cache",
+    "temporary_dir": "D:\\ISIS_IA\\ISIS\\data\\temporary"
+  },
+  "obsidian": {
+    "vault_name": "CEREBRO_VIVO",
+    "source_path": "E:\\Projetos\\CEREBRO_VIVO",
+    "migrated_path": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo",
+    "integration_mode": "READ_ONLY",
+    "allow_note_writes": false,
+    "allow_note_delete": false,
+    "allow_note_move": false,
+    "last_validation_status": "warning"
+  },
+  "storage": {
+    "dedicated_ssd_root": "D:\\ISIS_IA",
+    "minimum_free_gb": 40,
+    "max_cache_gb": 20,
+    "max_logs_gb": 10
+  },
+  "privacy": {
+    "offline_mode": true,
+    "screen_analysis_enabled": false,
+    "camera_enabled": false,
+    "microphone_enabled": false,
+    "internet_enabled": false
+  },
+  "profile": "CONTROLLED",
+  "voice": {
+    "language": "pt-BR",
+    "wake_word_enabled": true,
+    "wake_word": "aurora",
+    "stt_engine": "mock",
+    "stt_binary_path": "",
+    "stt_model_path": "",
+    "tts_engine": "mock",
+    "piper_binary_path": "",
+    "piper_voice_path": "",
+    "selected_voice": "pt-BR-female-mock",
+    "response_mode": "text_and_voice"
+  },
+  "resource_limits": {
+    "max_ram_mb": 24576,
+    "max_vram_mb": 10240,
+    "max_loaded_models": 1,
+    "keep_alive_seconds": 900,
+    "prefer_gpu": true,
+    "unload_aggressiveness": "balanced"
+  },
+  "models": [
+    {
+      "model_id": "fast-local-mock",
+      "profiles": [
+        "FAST",
+        "GENERAL"
+      ],
+      "estimated_memory_mb": 2048,
+      "context_tokens": 4096,
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "model_id": "coding-local-mock",
+      "profiles": [
+        "CODING"
+      ],
+      "estimated_memory_mb": 4096,
+      "context_tokens": 4096,
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "model_id": "vision-local-mock",
+      "profiles": [
+        "VISION"
+      ],
+      "estimated_memory_mb": 4096,
+      "context_tokens": 4096,
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "model_id": "embedding-local-mock",
+      "profiles": [
+        "EMBEDDING"
+      ],
+      "estimated_memory_mb": 1024,
+      "context_tokens": 4096,
+      "enabled": true,
+      "priority": 1
+    }
+  ],
+  "allowed_folders": [
+    "D:\\ISIS_IA"
+  ],
+  "protected_folders": [
+    "C:\\Users"
+  ],
+  "blocked_commands": [
+    "format",
+    "diskpart",
+    "reg delete"
+  ],
+  "online_enabled": false
+}

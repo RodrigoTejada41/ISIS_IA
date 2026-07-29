@@ -1,0 +1,38 @@
+REGISTRO DE SESSÃO
+
+Projeto:
+Versão:
+Data:
+Responsável:
+Objetivo da sessão:
+
+ESTADO INICIAL
+
+ATIVIDADES EXECUTADAS
+
+ARQUIVOS CRIADOS
+
+ARQUIVOS ALTERADOS
+
+ARQUIVOS REMOVIDOS
+
+DECISÕES TOMADAS
+
+PROBLEMAS ENCONTRADOS
+
+SOLUÇÕES APLICADAS
+
+TESTES EXECUTADOS
+
+RESULTADOS
+
+PENDÊNCIAS
+
+RISCOS
+
+PRÓXIMA TAREFA
+
+PONTO EXATO DE RETOMADA
+
+COMANDO DE RETOMADA
+Leia 00_MASTER.txt, PROJECT_OVERVIEW.txt, esta sessão e os documentos relacionados. Retome a partir do ponto exato registrado, sem repetir trabalho concluído.

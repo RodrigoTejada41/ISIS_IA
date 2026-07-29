@@ -1,0 +1,22 @@
+CHECKLIST DE INÍCIO DE PROJETO
+
+[ ] Problema definido
+[ ] Público-alvo definido
+[ ] Objetivo definido
+[ ] Escopo definido
+[ ] Fora de escopo definido
+[ ] MVP definido
+[ ] Requisitos documentados
+[ ] Regras de negócio documentadas
+[ ] Arquitetura definida
+[ ] Banco modelado
+[ ] Perfis e permissões definidos
+[ ] Segurança analisada
+[ ] UI/UX planejada
+[ ] Estratégia de testes definida
+[ ] Estratégia de backup definida
+[ ] Repositório criado
+[ ] Padrão Git definido
+[ ] Roadmap criado
+[ ] Riscos registrados
+[ ] Critérios de sucesso definidos

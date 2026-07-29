@@ -1,0 +1,28 @@
+LOGS E AUDITORIA
+
+LOG TÉCNICO
+- Data e hora.
+- Nível.
+- Componente.
+- Evento.
+- Identificador de correlação.
+- Erro.
+- Contexto seguro.
+
+AUDITORIA
+- Usuário.
+- Ação.
+- Registro afetado.
+- Valor anterior.
+- Valor posterior.
+- Origem.
+- Data e hora.
+
+PROIBIDO
+- Senhas.
+- Tokens.
+- Dados sensíveis completos.
+- Informações sem necessidade operacional.
+
+OBJETIVO
+Permitir diagnóstico, rastreabilidade e investigação sem expor dados indevidos.

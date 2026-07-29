@@ -1,0 +1,28 @@
+PADRÃO DE SEGURANÇA
+
+CONTROLES MÍNIMOS
+- Autenticação segura.
+- Autorização por perfil.
+- Senhas protegidas com hash forte.
+- Segredos fora do repositório.
+- Validação de entrada.
+- Proteção contra injeção.
+- Logs de ações críticas.
+- Expiração e revogação de sessões.
+- Backup protegido.
+- Princípio do menor privilégio.
+
+DADOS SENSÍVEIS
+- Classificar dados.
+- Limitar acesso.
+- Criptografar quando necessário.
+- Não expor em logs.
+- Definir retenção.
+- Definir descarte seguro.
+
+ANTES DE PUBLICAR
+- Verificar dependências vulneráveis.
+- Revisar permissões.
+- Revisar endpoints.
+- Testar acesso indevido.
+- Confirmar proteção de configurações.

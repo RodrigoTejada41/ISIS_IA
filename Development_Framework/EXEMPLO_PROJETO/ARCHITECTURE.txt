@@ -1,0 +1,34 @@
+PADRÃO DE ARQUITETURA
+
+OBJETIVOS
+- Separação de responsabilidades.
+- Baixo acoplamento.
+- Alta coesão.
+- Testabilidade.
+- Manutenção previsível.
+- Escalabilidade proporcional à necessidade.
+
+CAMADAS RECOMENDADAS
+1. Presentation
+2. Application
+3. Domain
+4. Infrastructure
+5. Persistence
+6. Integrations
+
+REGRAS
+- Interface não deve conter regra de negócio.
+- Controller não deve concentrar lógica complexa.
+- Regra de negócio deve ficar em serviço ou domínio.
+- Acesso ao banco deve ser isolado.
+- Integrações externas devem possuir adaptadores.
+- Configurações não devem ficar espalhadas no código.
+- Segredos nunca devem ser versionados.
+- Dependências devem apontar para abstrações quando necessário.
+
+ANTES DE ALTERAR A ARQUITETURA
+1. Registrar o motivo.
+2. Avaliar impacto.
+3. Documentar alternativas.
+4. Criar ADR.
+5. Definir estratégia de migração.

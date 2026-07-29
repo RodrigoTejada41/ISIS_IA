@@ -1,0 +1,34 @@
+PADRÃO DE BANCO DE DADOS
+
+MODELAGEM
+- Usar chaves primárias estáveis.
+- Definir chaves estrangeiras.
+- Usar índices conforme consultas reais.
+- Evitar campos genéricos sem significado.
+- Definir nulabilidade de forma consciente.
+- Registrar data de criação e atualização quando necessário.
+- Avaliar exclusão lógica versus física.
+
+MIGRAÇÕES
+- Toda alteração estrutural deve usar migração.
+- Migração deve ser reversível quando possível.
+- Nunca alterar banco de produção manualmente sem registro.
+- Fazer backup antes de mudanças críticas.
+- Validar migrações em ambiente de teste.
+
+INTEGRIDADE
+- Regras críticas devem existir também no banco quando aplicável.
+- Evitar duplicidade com índices únicos.
+- Não armazenar dados derivados sem necessidade.
+- Definir política de retenção.
+- Proteger dados sensíveis.
+
+DOCUMENTAÇÃO
+Para cada tabela registrar:
+- Finalidade.
+- Campos.
+- Tipos.
+- Relacionamentos.
+- Índices.
+- Regras.
+- Origem dos dados.

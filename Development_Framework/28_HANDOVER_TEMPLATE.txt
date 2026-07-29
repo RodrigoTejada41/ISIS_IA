@@ -1,0 +1,32 @@
+DOCUMENTO DE ENTREGA E RETOMADA
+
+Projeto:
+Versão:
+Data:
+Responsável anterior:
+Responsável atual:
+
+VISÃO GERAL
+
+ESTADO DO SISTEMA
+
+O QUE FUNCIONA
+
+O QUE NÃO FUNCIONA
+
+PENDÊNCIAS CRÍTICAS
+
+DÍVIDAS TÉCNICAS
+
+AMBIENTES
+
+COMO EXECUTAR
+
+COMO PUBLICAR
+
+CREDENCIAIS
+Não registrar senhas neste arquivo. Informar apenas onde estão armazenadas com segurança.
+
+PRÓXIMO PASSO
+
+RISCOS

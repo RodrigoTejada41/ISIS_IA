@@ -1,0 +1,32 @@
+PADRÃO GIT
+
+BRANCHES
+- main: produção.
+- develop: integração, quando utilizada.
+- feature/: nova funcionalidade.
+- fix/: correção.
+- hotfix/: correção urgente.
+- refactor/: refatoração.
+- docs/: documentação.
+
+COMMITS
+Formato:
+tipo(escopo): descrição objetiva
+
+Tipos:
+feat
+fix
+docs
+refactor
+test
+build
+chore
+perf
+security
+
+REGRAS
+- Um propósito por commit.
+- Não misturar refatoração ampla com correção pequena.
+- Não versionar segredos.
+- Revisar diff antes do commit.
+- Mensagem deve explicar a alteração.

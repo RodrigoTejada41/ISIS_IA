@@ -1,0 +1,1326 @@
+{
+  "generated_at": "2026-07-28T18:16:35.645659+00:00",
+  "isis_project": {
+    "path": "D:\\ISIS_IA\\AURORA",
+    "exists": true,
+    "files": 221,
+    "bytes": 513926
+  },
+  "cerebro_vivo": {
+    "path": "E:\\Projetos\\CEREBRO_VIVO",
+    "exists": true,
+    "obsidian_dir": "E:\\Projetos\\CEREBRO_VIVO\\.obsidian",
+    "has_obsidian_dir": true,
+    "total_files": 203112,
+    "total_dirs": 12308,
+    "total_bytes": 5286560147,
+    "markdown_files": 83194,
+    "attachments": 2601,
+    "attachment_bytes": 56551738,
+    "extensions": {
+      ".md": 83194,
+      "<no_ext>": 36075,
+      ".py": 16656,
+      ".pyc": 16656,
+      ".js": 15803,
+      ".h": 9730,
+      ".ts": 7232,
+      ".png": 2550,
+      ".json": 2260,
+      ".map": 2236,
+      ".qml": 1940,
+      ".cjs": 766,
+      ".dll": 727,
+      ".qm": 608,
+      ".cts": 582,
+      ".pyi": 578,
+      ".html": 543,
+      ".txt": 415,
+      ".pyd": 409,
+      ".mjs": 301,
+      ".yml": 255,
+      ".yaml": 253,
+      ".xml": 241,
+      ".afm": 211,
+      ".qmltypes": 200,
+      ".exe": 176,
+      ".mts": 139,
+      ".log": 138,
+      ".ps1": 124,
+      ".pak": 122,
+      ".typed": 114,
+      ".cpp": 112,
+      ".mat": 110,
+      ".a": 109,
+      ".lib": 88,
+      ".cmd": 87,
+      ".hpp": 79,
+      ".1": 71,
+      ".f90": 61,
+      ".cuh": 58,
+      ".cmake": 50,
+      ".jst": 50,
+      ".sav": 47,
+      ".sample": 42,
+      ".dat": 42,
+      ".pxd": 38,
+      ".flow": 37,
+      ".node": 34,
+      ".tsbuildinfo": 31,
+      ".csv": 30,
+      ".scm": 29,
+      ".pxi": 26,
+      ".f": 24,
+      ".metainfo": 22,
+      ".npz": 22,
+      ".wav": 22,
+      ".tsx": 21,
+      ".wasm": 20,
+      ".css": 20,
+      ".rst": 18,
+      ".gz": 17,
+      ".sh": 17,
+      ".c": 17,
+      ".arff": 16,
+      ".al": 16,
+      ".jinja": 16,
+      ".markdown": 14,
+      ".htm": 14,
+      ".pyx": 13,
+      ".bsd": 12,
+      ".7": 11,
+      ".xsl": 11,
+      ".npy": 11,
+      ".jpg": 10,
+      ".gif": 10,
+      ".sqlite": 10,
+      ".def": 10,
+      ".5": 8,
+      ".tpl": 8,
+      ".apache": 7,
+      ".bnf": 7,
+      ".pyf": 7,
+      ".build": 6,
+      ".ico": 5,
+      ".bat": 5,
+      ".cfg": 5,
+      ".ttf": 5,
+      ".asp": 5,
+      ".pys": 5,
+      ".base": 5,
+      ".jsonl": 5,
+      ".idx": 4,
+      ".pack": 4,
+      ".rev": 4,
+      ".zip": 4,
+      ".toml": 4,
+      ".frag": 4,
+      ".bin": 4,
+      ".pdb": 4,
+      ".svg": 4,
+      ".bz2": 4,
+      ".ini": 4,
+      ".emf": 4,
+      ".tab": 4,
+      ".gitignore": 4,
+      ".pem": 3,
+      ".db": 3,
+      ".gypi": 3,
+      ".onnx": 3,
+      ".nc": 3,
+      ".bmp": 3,
+      ".vbs": 3,
+      ".mesh": 2,
+      ".spec": 2,
+      ".icns": 2,
+      ".apache2": 2,
+      ".mit": 2,
+      ".sql": 2,
+      ".gyp": 2,
+      ".fish": 2,
+      ".cc": 2,
+      ".pth": 2,
+      ".rels": 2,
+      ".a99": 2,
+      ".b99": 2,
+      ".tmpl": 2,
+      ".g4": 2,
+      ".lark": 2,
+      ".go": 2,
+      ".php": 2,
+      ".coffee": 2,
+      ".lock": 2,
+      ".editorconfig": 2,
+      ".prettierignore": 2,
+      ".tmp": 2,
+      ".pdf": 2,
+      ".lnk": 1,
+      ".cat": 1,
+      "._pth": 1,
+      ".mdown": 1,
+      ".dtd": 1,
+      ".patch": 1,
+      ".tar": 1,
+      ".ninja": 1,
+      ".cs": 1,
+      ".chm": 1,
+      ".whl": 1,
+      ".orig": 1,
+      ".docx": 1,
+      ".jpeg": 1,
+      ".python": 1,
+      ".properties": 1,
+      ".rng": 1,
+      ".markdown-it": 1,
+      ".eot": 1,
+      ".woff": 1,
+      ".woff2": 1,
+      ".inc": 1,
+      ".f95": 1,
+      ".template": 1,
+      ".pc": 1,
+      ".pkl": 1,
+      ".fits": 1,
+      ".egg": 1,
+      ".pptx": 1,
+      ".ijg": 1,
+      ".pyw": 1,
+      ".ani": 1,
+      ".thrift": 1,
+      ".ld": 1,
+      ".cu": 1,
+      ".bazel": 1,
+      ".bzl": 1,
+      ".in": 1,
+      ".zi": 1,
+      ".rc": 1,
+      ".idl": 1,
+      ".sct": 1,
+      ".canvas": 1,
+      ".example": 1,
+      ".webmanifest": 1
+    },
+    "plugins": [],
+    "tags_top": [
+      [
+        "projetos",
+        59520
+      ],
+      [
+        "cerebro_vivo",
+        52660
+      ],
+      [
+        "conteúdo",
+        48010
+      ],
+      [
+        "conceitos",
+        22088
+      ],
+      [
+        "python",
+        9725
+      ],
+      [
+        "https",
+        9458
+      ],
+      [
+        "boas",
+        8384
+      ],
+      [
+        "react",
+        6873
+      ],
+      [
+        "estou",
+        6344
+      ],
+      [
+        "javascript",
+        6203
+      ],
+      [
+        "table-of-contents",
+        5799
+      ],
+      [
+        "c",
+        5583
+      ],
+      [
+        "book",
+        4356
+      ],
+      [
+        "cpp",
+        4295
+      ],
+      [
+        "with",
+        4232
+      ],
+      [
+        "csharp",
+        4101
+      ],
+      [
+        "java",
+        4087
+      ],
+      [
+        "html-and-css",
+        3287
+      ],
+      [
+        "resumo",
+        3264
+      ],
+      [
+        "conteudo",
+        3190
+      ],
+      [
+        "user",
+        3152
+      ],
+      [
+        "html",
+        3130
+      ],
+      [
+        "ideias",
+        3024
+      ],
+      [
+        "android",
+        3009
+      ],
+      [
+        "angularjs",
+        2960
+      ],
+      [
+        "php",
+        2955
+      ],
+      [
+        "programming",
+        2899
+      ],
+      [
+        "tutorial",
+        2688
+      ],
+      [
+        "Projetos",
+        2528
+      ],
+      [
+        "git",
+        2492
+      ],
+      [
+        "code",
+        2440
+      ],
+      [
+        "node",
+        2433
+      ],
+      [
+        "guide",
+        2331
+      ],
+      [
+        "angular",
+        2180
+      ],
+      [
+        "repo-content-pjax-container",
+        2126
+      ],
+      [
+        "laravel",
+        2109
+      ],
+      [
+        "M",
+        1884
+      ],
+      [
+        "http",
+        1857
+      ],
+      [
+        "r",
+        1849
+      ],
+      [
+        "text",
+        1813
+      ],
+      [
+        "go",
+        1647
+      ],
+      [
+        "github",
+        1615
+      ],
+      [
+        "symfony",
+        1599
+      ],
+      [
+        "linux",
+        1577
+      ],
+      [
+        "ruby",
+        1567
+      ],
+      [
+        "succinctly",
+        1536
+      ],
+      [
+        "introduction",
+        1529
+      ],
+      [
+        "1",
+        1526
+      ],
+      [
+        "Y",
+        1502
+      ],
+      [
+        "-",
+        1436
+      ]
+    ],
+    "links_count": 1518547,
+    "frontmatter_files": 62898,
+    "categories": {
+      "Bug": 15235,
+      "Documentacao": 62513,
+      "Decisao": 1211,
+      "Tarefa": 3315,
+      "Prompt": 516,
+      "Solucao": 176,
+      "Ideia": 224,
+      "Arquitetura": 3,
+      "Requisito": 1
+    },
+    "projects_identified": [
+      ".github",
+      "00_Index",
+      "00_PAINEL",
+      "00_index",
+      "01_agentes",
+      "02_programacao",
+      "03_SNIPPETS",
+      "03_boaspraticas",
+      "04_ERROS_E_SOLUCOES",
+      "04_ferramentas",
+      "05_MAPA_TECNOLOGIAS",
+      "05_apis",
+      "06_AUTOMACOES",
+      "06_carreira",
+      "07_INDICES",
+      "07_seguranca",
+      "08_estudos",
+      "09_roadmaps",
+      "10_automacao",
+      "11_Projetos",
+      "12_sites",
+      "13_github",
+      "16_APRENDIZADOS",
+      "1_beginner",
+      "2_intermediate",
+      "3_advanced",
+      "BUILD_LICENSES",
+      "CEREBRO_VIVO",
+      "Conceitos",
+      "Conhecimento",
+      "Conversas",
+      "Documentos",
+      "JavaScript",
+      "Livros_Processados",
+      "Logs",
+      "Projetos",
+      "Resumos",
+      "Templates",
+      "_Relatorios",
+      "agents",
+      "ajv",
+      "aprendizado",
+      "argparse",
+      "array-buffer-byte-length",
+      "arraybuffer.prototype.slice",
+      "async-function",
+      "available-typed-arrays",
+      "better-sqlite3",
+      "body-parser",
+      "books",
+      "braces",
+      "bradtraversy_design_resources_for_developers",
+      "buffer",
+      "call-bind",
+      "call-bind-apply-helpers",
+      "call-bound",
+      "casts",
+      "checklists",
+      "chownr",
+      "claude-code-mastery",
+      "cmap-resources",
+      "color-helpers",
+      "commander",
+      "commands",
+      "conceitos",
+      "config",
+      "config-array",
+      "configuring-npm",
+      "conversas",
+      "cookie",
+      "copilot",
+      "copy-master",
+      "copy-squad",
+      "core",
+      "corepack",
+      "courses",
+      "cross-spawn",
+      "css-calc",
+      "css-color-parser",
+      "css-parser-algorithms",
+      "css-tokenizer",
+      "css-tree",
+      "customize-cloud-agent",
+      "dashboard",
+      "data-view-buffer",
+      "data-view-byte-length",
+      "data-view-byte-offset",
+      "define-data-property",
+      "define-properties",
+      "depd",
+      "diff",
+      "docs",
+      "domino",
+      "downloads",
+      "dunder-proto",
+      "electron-to-chromium",
+      "enhanced-resolve",
+      "entities",
+      "error-ex",
+      "erros_e_solucoes",
+      "es-define-property",
+      "es-errors",
+      "es-object-atoms",
+      "es-set-tostringtag",
+      "es-to-primitive",
+      "eslint",
+      "eslint-config-prettier",
+      "espree",
+      "estraverse",
+      "express",
+      "express-rate-limit",
+      "fast-glob",
+      "fast-levenshtein",
+      "fastq",
+      "fdir",
+      "fill-range",
+      "finalhandler",
+      "flatted",
+      "florinpop17_app_ideas",
+      "for-each",
+      "formatly",
+      "fs.scandir",
+      "fs.stat",
+      "fs.walk",
+      "function-bind",
+      "function.prototype.name",
+      "functions-have-names",
+      "generator-function",
+      "get-intrinsic",
+      "get-proto",
+      "get-symbol-description",
+      "glob",
+      "glob-parent",
+      "globalthis",
+      "golden",
+      "gopd",
+      "hack_with_github_awesome_hacking",
+      "has-bigints",
+      "has-property-descriptors",
+      "has-proto",
+      "has-symbols",
+      "has-tostringtag",
+      "hasown",
+      "historico",
+      "hosted-git-info",
+      "hubs",
+      "iconv-lite",
+      "ideias",
+      "ignore",
+      "indices",
+      "internal-slot",
+      "is-array-buffer",
+      "is-async-function",
+      "is-bigint",
+      "is-boolean-object",
+      "is-callable",
+      "is-core-module",
+      "is-data-view",
+      "is-date-object",
+      "is-extglob",
+      "is-finalizationregistry",
+      "is-generator-function",
+      "is-glob",
+      "is-map",
+      "is-negative-zero",
+      "is-number",
+      "is-number-object",
+      "is-regex",
+      "is-set",
+      "is-shared-array-buffer",
+      "is-string",
+      "is-symbol",
+      "is-typed-array",
+      "is-weakmap",
+      "is-weakref",
+      "is-weakset",
+      "issue_template",
+      "javascript",
+      "jose",
+      "js",
+      "js-tokens",
+      "jsdom",
+      "json-parse-better-errors",
+      "json5",
+      "jszip",
+      "keyv",
+      "knip",
+      "libnpmdiff",
+      "libnpmexec",
+      "libnpmfund",
+      "libnpmpack",
+      "linguagens",
+      "lint-staged",
+      "livros_processados",
+      "logs",
+      "logs_agente",
+      "math-intrinsics",
+      "mcp-fetch-server",
+      "mcp-server-sqlite",
+      "mdn-data",
+      "memoria-codex",
+      "micromatch",
+      "mime-types",
+      "minimist",
+      "module-importer",
+      "more",
+      "nice-try",
+      "node",
+      "node-gyp",
+      "node-releases",
+      "node-server",
+      "node-v24.14.0-win-x64",
+      "normalize-package-data",
+      "npm",
+      "npm-run-all",
+      "object-inspect",
+      "own-keys",
+      "oxc-parser",
+      "oxc-resolver",
+      "package-json-from-dist",
+      "pacote",
+      "pako",
+      "parser",
+      "php",
+      "picocolors",
+      "picomatch",
+      "pidtree",
+      "pixel-agents",
+      "playwright",
+      "plugin-react",
+      "possible-typed-array-names",
+      "prettier",
+      "project-service",
+      "projetos",
+      "punycode",
+      "python",
+      "qs",
+      "raw",
+      "raw-body",
+      "readability",
+      "readable-stream",
+      "reflect.getprototypeof",
+      "regexp.prototype.flags",
+      "relatorios",
+      "resolve-pkg-maps",
+      "resumos",
+      "retry",
+      "reusify",
+      "router",
+      "safe-array-concat",
+      "safe-buffer",
+      "safe-push-apply",
+      "safe-regex-test",
+      "saxes",
+      "sdk",
+      "server-filesystem",
+      "set-function-length",
+      "set-function-name",
+      "set-proto",
+      "side-channel",
+      "side-channel-list",
+      "side-channel-map",
+      "side-channel-weakmap",
+      "sistema",
+      "sources",
+      "specificity",
+      "statuses",
+      "stop-iteration-iterator",
+      "string-argv",
+      "string.prototype.padend",
+      "string.prototype.trim",
+      "string.prototype.trimend",
+      "string.prototype.trimstart",
+      "string_decoder",
+      "supports-preserve-symlinks-flag",
+      "tasks",
+      "templates",
+      "test",
+      "test-electron",
+      "tldts",
+      "to-regex-range",
+      "turndown",
+      "typed-array-buffer",
+      "typed-array-byte-length",
+      "typed-array-byte-offset",
+      "typed-array-length",
+      "typescript",
+      "unbox-primitive",
+      "using-npm",
+      "webidl-conversions",
+      "webview-ui",
+      "whatwg-url",
+      "which-boxed-primitive",
+      "which-builtin-type",
+      "which-collection",
+      "which-typed-array",
+      "word-wrap",
+      "xquads-squads",
+      "yallist",
+      "yaml",
+      "zod-to-json-schema"
+    ],
+    "duplicate_names": [
+      {
+        "name": ".gitignore",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.gitignore",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\.gitignore",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.gitignore",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.husky\\_\\.gitignore",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\webview-ui\\.gitignore"
+        ],
+        "count": 5
+      },
+      {
+        "name": "collector.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\collector.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_internal\\index\\collector.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_internal\\index\\collector.py"
+        ],
+        "count": 3
+      },
+      {
+        "name": "dashboard.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\dashboard.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\mpire\\dashboard\\dashboard.py"
+        ],
+        "count": 2
+      },
+      {
+        "name": "gui.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\gui.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\tqdm\\gui.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\fsspec\\gui.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\tqdm\\gui.py"
+        ],
+        "count": 4
+      },
+      {
+        "name": "knowledge_contract.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\knowledge_contract.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\scripts\\knowledge_contract.py"
+        ],
+        "count": 2
+      },
+      {
+        "name": "main.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_internal\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_internal\\cli\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\annotated_doc\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\docling\\cli\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\dotenv\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\markdown_it\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_internal\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_internal\\cli\\main.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pydantic\\main.py"
+        ],
+        "count": 27
+      },
+      {
+        "name": "memory.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\accelerate\\utils\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\anyio\\streams\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\fsspec\\implementations\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\accelerator\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\cuda\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\mtia\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\xpu\\memory.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\_inductor\\memory.py"
+        ],
+        "count": 9
+      },
+      {
+        "name": "readme.md",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-darwin-arm64\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-darwin-x64\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-linux-arm64-gnu\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-linux-x64-gnu\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-win32-arm64-msvc\\README.md",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\@github\\copilot\\clipboard\\node_modules\\@teddyzhu\\clipboard-win32-x64-msvc\\README.md"
+        ],
+        "count": 1012
+      },
+      {
+        "name": "scheduler.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\scheduler.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\accelerate\\scheduler.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\torch\\_inductor\\scheduler.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\transformers\\generation\\continuous_batching\\scheduler.py"
+        ],
+        "count": 4
+      },
+      {
+        "name": "config",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\config",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\config",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\config"
+        ],
+        "count": 3
+      },
+      {
+        "name": "description",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\description",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\description",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\description"
+        ],
+        "count": 3
+      },
+      {
+        "name": "head",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\logs\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\logs\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\refs\\remotes\\origin\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\logs\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\logs\\refs\\remotes\\origin\\HEAD",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\refs\\remotes\\origin\\HEAD"
+        ],
+        "count": 10
+      },
+      {
+        "name": "index",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\index",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\index",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\index"
+        ],
+        "count": 3
+      },
+      {
+        "name": "applypatch-msg.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\applypatch-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\applypatch-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\applypatch-msg.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "commit-msg.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\commit-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\commit-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\commit-msg.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "fsmonitor-watchman.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\fsmonitor-watchman.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\fsmonitor-watchman.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\fsmonitor-watchman.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "post-update.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\post-update.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\post-update.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\post-update.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-applypatch.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-applypatch.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-applypatch.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-applypatch.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-commit.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-commit.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-commit.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-commit.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-merge-commit.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-merge-commit.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-merge-commit.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-merge-commit.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-push.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-push.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-push.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-push.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-rebase.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-rebase.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-rebase.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-rebase.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "pre-receive.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\pre-receive.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\pre-receive.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\pre-receive.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "prepare-commit-msg.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\prepare-commit-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\prepare-commit-msg.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\prepare-commit-msg.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "push-to-checkout.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\push-to-checkout.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\push-to-checkout.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\push-to-checkout.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "sendemail-validate.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\sendemail-validate.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\sendemail-validate.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\sendemail-validate.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "update.sample",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\hooks\\update.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\hooks\\update.sample",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\hooks\\update.sample"
+        ],
+        "count": 3
+      },
+      {
+        "name": "exclude",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\info\\exclude",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\info\\exclude",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\info\\exclude"
+        ],
+        "count": 3
+      },
+      {
+        "name": "main",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\logs\\refs\\heads\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\logs\\refs\\remotes\\origin\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\refs\\heads\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\.git\\refs\\remotes\\origin\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\logs\\refs\\heads\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\.git\\refs\\heads\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\logs\\refs\\heads\\main",
+          "E:\\Projetos\\CEREBRO_VIVO\\xquads-squads\\.git\\refs\\heads\\main"
+        ],
+        "count": 8
+      },
+      {
+        "name": "license.txt",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\cachecontrol\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\dependency_groups\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\distlib\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\urllib3\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\licenses\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\licenses\\src\\pip\\_vendor\\cachecontrol\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\licenses\\src\\pip\\_vendor\\dependency_groups\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\licenses\\src\\pip\\_vendor\\distlib\\LICENSE.txt",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\licenses\\src\\pip\\_vendor\\urllib3\\LICENSE.txt"
+        ],
+        "count": 70
+      },
+      {
+        "name": "python.exe",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\python.exe",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Scripts\\python.exe"
+        ],
+        "count": 2
+      },
+      {
+        "name": "pythonw.exe",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\pythonw.exe",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Scripts\\pythonw.exe"
+        ],
+        "count": 2
+      },
+      {
+        "name": "vcruntime140.dll",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\vcruntime140.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\PySide6\\vcruntime140.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\shiboken6\\vcruntime140.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\PySide6\\vcruntime140.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\shiboken6\\vcruntime140.dll"
+        ],
+        "count": 5
+      },
+      {
+        "name": "vcruntime140_1.dll",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\vcruntime140_1.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\PySide6\\vcruntime140_1.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\shiboken6\\vcruntime140_1.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\PySide6\\vcruntime140_1.dll",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\shiboken6\\vcruntime140_1.dll"
+        ],
+        "count": 5
+      },
+      {
+        "name": "installer",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator-1.11.4.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro-1.9.0.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter-0.14.0.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python-3.3.0.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai-2.31.0.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\psutil-7.2.2.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pypdf-6.10.0.dist-info\\INSTALLER",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pyside6-6.11.0.dist-info\\INSTALLER"
+        ],
+        "count": 142
+      },
+      {
+        "name": "metadata",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator-1.11.4.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro-1.9.0.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter-0.14.0.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python-3.3.0.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai-2.31.0.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\psutil-7.2.2.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pypdf-6.10.0.dist-info\\METADATA",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pyside6-6.11.0.dist-info\\METADATA"
+        ],
+        "count": 142
+      },
+      {
+        "name": "record",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator-1.11.4.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro-1.9.0.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter-0.14.0.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python-3.3.0.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai-2.31.0.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\psutil-7.2.2.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pypdf-6.10.0.dist-info\\RECORD",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pyside6-6.11.0.dist-info\\RECORD"
+        ],
+        "count": 142
+      },
+      {
+        "name": "wheel",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator-1.11.4.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro-1.9.0.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter-0.14.0.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python-3.3.0.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai-2.31.0.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip-26.0.1.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\psutil-7.2.2.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pypdf-6.10.0.dist-info\\WHEEL",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pyside6-6.11.0.dist-info\\WHEEL"
+        ],
+        "count": 142
+      },
+      {
+        "name": "authors",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\licenses\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\npm\\node_modules\\spdx-correct\\node_modules\\spdx-expression-parse\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\npm\\node_modules\\spdx-expression-parse\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.tools\\node-v24.14.0-win-x64\\node_modules\\npm\\node_modules\\validate-npm-package-license\\node_modules\\spdx-expression-parse\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\licenses\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pygments-2.20.0.dist-info\\licenses\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\sympy-1.14.0.dist-info\\licenses\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\node_modules\\normalize-package-data\\AUTHORS",
+          "E:\\Projetos\\CEREBRO_VIVO\\pixel-agents\\node_modules\\spdx-expression-parse\\AUTHORS"
+        ],
+        "count": 9
+      },
+      {
+        "name": "license",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\beautifulsoup4-4.14.3.dist-info\\licenses\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator-1.11.4.dist-info\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro-1.9.0.dist-info\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter-0.14.0.dist-info\\licenses\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python-3.3.0.dist-info\\licenses\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai-2.31.0.dist-info\\licenses\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\certifi\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\distro\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\packaging\\LICENSE",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\pkg_resources\\LICENSE"
+        ],
+        "count": 1096
+      },
+      {
+        "name": "css.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\css.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\css.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pandas\\io\\formats\\css.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pygments\\lexers\\css.py"
+        ],
+        "count": 4
+      },
+      {
+        "name": "dammit.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\dammit.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\dammit.py"
+        ],
+        "count": 2
+      },
+      {
+        "name": "diagnose.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\rich\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\numpy\\f2py\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\rich\\diagnose.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\diagnose.py"
+        ],
+        "count": 7
+      },
+      {
+        "name": "element.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\element.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\element.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\marko\\element.py"
+        ],
+        "count": 3
+      },
+      {
+        "name": "exceptions.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\deep_translator\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_internal\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\msgpack\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\requests\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\resolvelib\\resolvers\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\urllib3\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\attr\\exceptions.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\attrs\\exceptions.py"
+        ],
+        "count": 47
+      },
+      {
+        "name": "filter.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\filter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\pygments\\filter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\filter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\filter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pygments\\filter.py"
+        ],
+        "count": 5
+      },
+      {
+        "name": "formatter.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\pygments\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\PySide6\\scripts\\qtpy2cpp_lib\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\colorlog\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pip\\_vendor\\pygments\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pygments\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\PySide6\\scripts\\qtpy2cpp_lib\\formatter.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pythonwin\\pywin\\scintilla\\formatter.py"
+        ],
+        "count": 9
+      },
+      {
+        "name": "py.typed",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\distro\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\jiter\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\language_tool_python\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\cachecontrol\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\certifi\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\dependency_groups\\py.typed",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\pip\\_vendor\\distro\\py.typed"
+        ],
+        "count": 114
+      },
+      {
+        "name": "_deprecation.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\_deprecation.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\_deprecation.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\huggingface_hub\\utils\\_deprecation.py"
+        ],
+        "count": 3
+      },
+      {
+        "name": "_typing.py",
+        "paths": [
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\bs4\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.python\\py\\Lib\\site-packages\\openai\\_utils\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\bs4\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\huggingface_hub\\utils\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\jsonschema\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\pandas\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\PIL\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\common\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\cupy\\_typing.py",
+          "E:\\Projetos\\CEREBRO_VIVO\\.venv\\Lib\\site-packages\\scipy\\_lib\\array_api_compat\\numpy\\_typing.py"
+        ],
+        "count": 17
+      }
+    ],
+    "duplicate_size_groups": 16011,
+    "errors": []
+  },
+  "drives": [
+    {
+      "root": "C:\\",
+      "total_bytes": 499211792384,
+      "used_bytes": 460550971392,
+      "free_bytes": 38660820992
+    },
+    {
+      "root": "D:\\",
+      "total_bytes": 239378362368,
+      "used_bytes": 107061248,
+      "free_bytes": 239271301120
+    },
+    {
+      "root": "E:\\",
+      "total_bytes": 6001156681728,
+      "used_bytes": 3810128805888,
+      "free_bytes": 2191027875840
+    },
+    {
+      "root": "H:\\",
+      "total_bytes": 2000396742656,
+      "used_bytes": 1313400152064,
+      "free_bytes": 686996590592
+    },
+    {
+      "root": "K:\\",
+      "total_bytes": 2000396742656,
+      "used_bytes": 52505235456,
+      "free_bytes": 1947891507200
+    }
+  ]
+}

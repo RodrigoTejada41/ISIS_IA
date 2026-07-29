@@ -1,0 +1,34 @@
+PADRÃO DE UI/UX
+
+OBJETIVOS
+- Clareza.
+- Consistência.
+- Baixo esforço cognitivo.
+- Resposta visual imediata.
+- Prevenção de erro.
+- Acessibilidade.
+
+REGRAS
+- Uma ação principal por contexto.
+- Botões devem ter nomes objetivos.
+- Campos obrigatórios devem ser identificados.
+- Erros devem explicar como corrigir.
+- Estados de carregamento devem ser visíveis.
+- Ações destrutivas devem pedir confirmação.
+- Navegação deve ser previsível.
+- Layout deve funcionar nas resoluções definidas.
+
+ESTADOS OBRIGATÓRIOS
+- Carregando.
+- Vazio.
+- Sucesso.
+- Erro.
+- Sem permissão.
+- Offline, quando aplicável.
+
+CHECKLIST
+- Contraste adequado.
+- Tamanho de fonte legível.
+- Navegação por teclado quando aplicável.
+- Mensagens claras.
+- Não depender apenas de cor.

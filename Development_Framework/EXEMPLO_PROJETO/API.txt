@@ -1,0 +1,36 @@
+PADRÃO DE API
+
+REGRAS
+- Usar versionamento quando necessário.
+- Validar entrada.
+- Padronizar respostas.
+- Usar códigos HTTP adequados.
+- Não expor detalhes internos.
+- Autenticar e autorizar operações.
+- Aplicar rate limit quando necessário.
+- Gerar logs com correlação.
+
+RESPOSTA PADRÃO
+success:
+message:
+data:
+errors:
+trace_id:
+
+DOCUMENTAÇÃO POR ENDPOINT
+Método:
+Rota:
+Objetivo:
+Permissão:
+Parâmetros:
+Corpo:
+Resposta:
+Erros:
+Exemplo:
+Limites:
+
+SEGURANÇA
+- Nunca confiar em dados do cliente.
+- Validar autorização no servidor.
+- Não registrar senhas ou tokens.
+- Aplicar proteção contra abuso.

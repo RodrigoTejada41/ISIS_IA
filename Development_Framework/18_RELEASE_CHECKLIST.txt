@@ -1,0 +1,39 @@
+CHECKLIST DE RELEASE
+
+PLANEJAMENTO
+[ ] Escopo fechado
+[ ] Versão definida
+[ ] Changelog atualizado
+[ ] Migrações revisadas
+
+QUALIDADE
+[ ] Build concluído
+[ ] Testes executados
+[ ] Regressão verificada
+[ ] Logs revisados
+[ ] Performance validada
+
+SEGURANÇA
+[ ] Permissões revisadas
+[ ] Segredos protegidos
+[ ] Dependências verificadas
+
+DADOS
+[ ] Backup realizado
+[ ] Restauração testada quando crítica
+[ ] Migração validada
+
+DOCUMENTAÇÃO
+[ ] Manual atualizado
+[ ] SPEC atualizada
+[ ] Sessão registrada
+
+PUBLICAÇÃO
+[ ] Ambiente confirmado
+[ ] Deploy realizado
+[ ] Smoke test executado
+[ ] Monitoramento confirmado
+
+ROLLBACK
+[ ] Procedimento definido
+[ ] Versão anterior disponível

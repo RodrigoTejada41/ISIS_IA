@@ -1,0 +1,16 @@
+[project]
+name = "aurora-local-assistant"
+version = "0.1.0"
+description = "AURORA local assistant core"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2",
+]
+
+[project.optional-dependencies]
+hardware = ["psutil>=5.9"]
+test = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

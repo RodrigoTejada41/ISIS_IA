@@ -1,0 +1,19 @@
+PROMPT DE RETOMADA RÁPIDA
+
+Leia, nesta ordem:
+1. 00_MASTER.txt
+2. PROJECT_OVERVIEW.txt
+3. PROJECT_STATUS.txt
+4. A SPEC relacionada
+5. A última sessão
+6. DECISION_LOG.txt
+7. BUGS_AND_SOLUTIONS.txt
+
+Depois:
+- Resuma o estado atual.
+- Confirme a tarefa pendente.
+- Aponte riscos.
+- Informe os arquivos prováveis.
+- Crie um plano curto.
+- Retome exatamente do ponto registrado.
+- Não refaça trabalho já concluído.

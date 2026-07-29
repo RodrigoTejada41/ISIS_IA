@@ -1,0 +1,842 @@
+{
+  "generated_at": "2026-07-28T19:37:07.068951+00:00",
+  "vault": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo",
+  "manifest": "D:\\ISIS_IA\\ISIS\\logs\\migration\\migration_manifest.json",
+  "vault_exists": true,
+  "obsidian_dir_exists": true,
+  "migration_manifest_status": "validated",
+  "migration_hash_valid": true,
+  "links": {
+    "checked_markdown_files": 5000,
+    "total_links_checked": 170934,
+    "unresolved_count_sampled": 200,
+    "unresolved_sample": [
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_2c1f9688.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_2c1f9688.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_2c1f9688.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_2c1f9688.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_20260412_180738_a4918274_2c1f9688.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500-3b9d5448"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "readme-f16b602c-a3423bca-418fce4c-8b5d4699"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "readme-f16b602c-a3423bca-418fce4c"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "template-conversa-1881319c-abf0d3b4-47be6dfc-03aa8ce4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "template-conversa-1881319c-abf0d3b4-47be6dfc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_20260412_182523.md",
+        "link": "4-problemas-identificados-6fea66a4-75496934-61822638-55f7abf2"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500-3b9d5448"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "readme-f16b602c-a3423bca-418fce4c-8b5d4699"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "readme-f16b602c-a3423bca-418fce4c"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "template-conversa-1881319c-abf0d3b4-47be6dfc-03aa8ce4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "template-conversa-1881319c-abf0d3b4-47be6dfc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_0d913cbc_f1942f62.md",
+        "link": "4-problemas-identificados-6fea66a4-75496934-61822638-55f7abf2"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_181102.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_181102.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_181102_a15429a1.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_181102_a15429a1.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_103b58f4_20260412_182523.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_20260412_182603.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_d729e15c.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_d729e15c.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_d729e15c.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_d729e15c.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_180722_38096cc1_d729e15c.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_181102.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_181102.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_181102_65e45155.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_181102_65e45155.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d_20260412_180738-a4918274"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90_20260412_180722-38096cc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90-103b58f4-0d913cbc"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\caixa_de_entrada_conversas_761df16d_7e271e90_20260412_182523.md",
+        "link": "template-conversa-1881319c-abf0d3b4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_1ba69154.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_1ba69154.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_1ba69154.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_1ba69154.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_1ba69154.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_20260412_182558.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_20260412_180733_12073d6a_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720.md",
+        "link": "weather-app-a01664f0-b5c344a6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6.md",
+        "link": "weather-app-a01664f0-b5c344a6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_141a758f.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_141a758f.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_141a758f.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_141a758f.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_141a758f.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_20260412_182558.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_20260412_182558.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_180720_f9b186d6_20260412_182558.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_181059.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_181059.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_181059_4ace16ac.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_181059_4ace16ac.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_182517.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_182517.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_181059.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_181059.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_181059_91f7689c.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_181059_91f7689c.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "github-timeline-app-55ab863f-ef6b78c5-9d0f9bfa"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "battleship-bot-d4085b54-8a1ca84e-1a1919df"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "calorie-counter-app-45dec64d-9f5d3b47-9f926842"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "github-profiles-5107ecf7-2d7bc67a-25d4527d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_20260412_182517.md",
+        "link": "spellit-app-83748dd8-1593a2c9-7efe61de"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "chat-app-92f5e418-b104d5b7_20260412_180720-f9b186d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f-41a9dc50"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "chat-app-92f5e418-b104d5b7"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "chat-app-92f5e418_20260412_180733-12073d6a"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "chat-app-92f5e418"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "github-timeline-app-55ab863f-ef6b78c5-9d0f9bfa"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "battleship-bot-d4085b54-8a1ca84e-1a1919df"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "calorie-counter-app-45dec64d-9f5d3b47-9f926842"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "github-profiles-5107ecf7-2d7bc67a-25d4527d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50.md",
+        "link": "spellit-app-83748dd8-1593a2c9-7efe61de"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "battleship-bot-d4085b54-8a1ca84e-1a1919df-c83fd849"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "border-radius-previewer-fff88706-3ebd279d-2bfa7426-2a6e09d4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "calculator-cli-840afa14-f944a840-8abf3e7e-78a4c433"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "calendar-app-79a525c1-0da7ce1b-7a2b0a82-f2161908"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "github-profiles-5107ecf7-2d7bc67a-25d4527d-28165f03"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "github-timeline-app-55ab863f-ef6b78c5-9d0f9bfa-78491db9"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "markdown-previewer-34afb88f-3dff9cce-f7035494-ad202fbf"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "notes-app-e63cf163-2ef1f0b4-a1e62f29-fc4fcf17"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_20260412_182517.md",
+        "link": "recipe-app-0a12289e-11b412ab-63a2a3d2-a904c3d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "chat-app-92f5e418-b104d5b7-f47cd45f"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "battleship-bot-d4085b54-8a1ca84e-1a1919df-c83fd849"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "border-radius-previewer-fff88706-3ebd279d-2bfa7426-2a6e09d4"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "calculator-cli-840afa14-f944a840-8abf3e7e-78a4c433"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "calendar-app-79a525c1-0da7ce1b-7a2b0a82-f2161908"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "github-profiles-5107ecf7-2d7bc67a-25d4527d-28165f03"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "github-timeline-app-55ab863f-ef6b78c5-9d0f9bfa-78491db9"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "markdown-previewer-34afb88f-3dff9cce-f7035494-ad202fbf"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "notes-app-e63cf163-2ef1f0b4-a1e62f29-fc4fcf17"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\chat_app_92f5e418_b104d5b7_f47cd45f_41a9dc50_a0ee60b6.md",
+        "link": "recipe-app-0a12289e-11b412ab-63a2a3d2-a904c3d6"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738.md",
+        "link": "indice-conversas-d375880b-e1a2a569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738.md",
+        "link": "readme-52424dc1-36586569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738.md",
+        "link": "readme-52424dc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738.md",
+        "link": "indice-conversas-d375880b"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35.md",
+        "link": "indice-conversas-d375880b-e1a2a569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35.md",
+        "link": "readme-52424dc1-36586569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35.md",
+        "link": "readme-52424dc1"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35.md",
+        "link": "indice-conversas-d375880b"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "fila_conversas-730efb88-b448df1d_20260412_180723-5e2946d8"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "fila_conversas-730efb88-b448df1d-9ff30740"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "fila_conversas-730efb88"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "fila_conversas-730efb88-b448df1d-9ff30740-8f8b0671"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "indice-conversas-d375880b-e1a2a569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "indice-conversas-d375880b_20260412_180739-9e347809"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500-3b9d5448"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_20260412_182608.md",
+        "link": "indice-conversas-d375880b-e1a2a569_20260412_180724-52ab5347"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "fila_conversas-730efb88-b448df1d"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "fila_conversas-730efb88-b448df1d_20260412_180723-5e2946d8"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "fila_conversas-730efb88-b448df1d-9ff30740"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "fila_conversas-730efb88"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "fila_conversas-730efb88-b448df1d-9ff30740-8f8b0671"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "indice-conversas-d375880b-e1a2a569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "indice-conversas-d375880b_20260412_180739-9e347809"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "indice-conversas-d375880b-e1a2a569-cbd5d500-3b9d5448"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_20260412_180738_51326b35_641aefc5.md",
+        "link": "indice-conversas-d375880b-e1a2a569_20260412_180724-52ab5347"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "caixa_de_entrada_conversas-761df16d-7e271e90"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "indice-conversas-d375880b-e1a2a569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "indice-snippets-c87d450a-6021b57b"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "readme-52424dc1-36586569"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "readme-f16b602c-a3423bca"
+      },
+      {
+        "file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\Conversas\\fila_conversas_730efb88_b448df1d_20260412_180723.md",
+        "link": "fila_conversas-730efb88"
+      }
+    ],
+    "status": "warning"
+  },
+  "attachments": {
+    "attachments": 2601,
+    "by_extension": {
+      ".png": 2550,
+      ".wav": 22,
+      ".jpg": 10,
+      ".gif": 10,
+      ".zip": 4,
+      ".pdf": 2,
+      ".docx": 1,
+      ".jpeg": 1,
+      ".pptx": 1
+    },
+    "empty_count_sampled": 0,
+    "empty_sample": [],
+    "status": "ok"
+  },
+  "plugins": {
+    "community_plugins_file": "D:\\ISIS_IA\\ISIS\\brain\\cerebro_vivo\\.obsidian\\community-plugins.json",
+    "configured_plugins": [],
+    "installed_plugin_dirs": [],
+    "missing_plugin_dirs": [],
+    "status": "ok"
+  },
+  "status": "warning"
+}
