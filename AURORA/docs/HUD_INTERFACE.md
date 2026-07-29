@@ -32,6 +32,7 @@ Layout:
 - Campo de comando envia prompts reais para `IsisAssistantCore`.
 - Respostas aparecem no historico da conversa.
 - Respostas geram audio Piper quando TTS esta pronto.
+- Respostas com audio exibem player local para tocar manualmente se o navegador bloquear autoplay.
 - Versao web local exposta por `ui-hud-web`.
 - Avatar animado em Canvas com aneis, pulso e linhas de energia.
 

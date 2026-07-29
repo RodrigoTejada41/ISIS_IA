@@ -623,3 +623,4 @@ Data: 2026-07-28.
 - Removido uso de `speechSynthesis` para TTS no HUD.
 - `VOZ LOCAL` e respostas usam apenas audio local gerado pelo Piper.
 - `MIC` continua usando API do navegador somente para ditado.
+- Respostas e teste de voz exibem player `audio controls` quando o WAV local e gerado.

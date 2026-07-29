@@ -199,6 +199,7 @@ button,input {{ font:inherit; }}
 .bubble small {{ display:block; color:var(--muted); margin-top:8px; font-size:11px; }}
 .bubble-actions {{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }}
 .bubble-actions button {{ border:1px solid rgba(37,230,255,.25); background:rgba(37,230,255,.06); color:var(--cyan); border-radius:6px; padding:6px 8px; cursor:pointer; font-size:12px; }}
+.local-audio {{ display:block; width:100%; height:34px; margin-top:10px; }}
 .user {{ border-color:rgba(36,120,255,.55); }}
 .user b {{ color:var(--blue); }}
 .isis {{ border-color:rgba(32,255,200,.54); }}
@@ -380,7 +381,16 @@ function scrollMessagesToBottom() {{
     messages.scrollTop = messages.scrollHeight;
   }});
 }}
-function add(author, text, cls="", meta=null) {{
+function attachAudio(div, url) {{
+  if (!url) return;
+  const audio = document.createElement("audio");
+  audio.controls = true;
+  audio.preload = "auto";
+  audio.src = url;
+  audio.className = "local-audio";
+  div.appendChild(audio);
+}}
+function add(author, text, cls="", meta=null, audioUrl=null) {{
   const div = document.createElement("div");
   div.className = "bubble " + cls;
   div.innerHTML = "<b></b><span></span>";
@@ -403,6 +413,7 @@ function add(author, text, cls="", meta=null) {{
     }};
     div.appendChild(actions);
   }}
+  attachAudio(div, audioUrl);
   messages.appendChild(div);
   scrollMessagesToBottom();
 }}
@@ -413,7 +424,7 @@ function selectPanel(name) {{
 }}
 function play(url) {{
   if (!url) return;
-  new Audio(url).play().catch(() => setStatus("Audio gerado; autoplay bloqueado pelo navegador"));
+  new Audio(url).play().catch(() => setStatus("Audio gerado; clique no player da mensagem para ouvir"));
 }}
 function setLocalVoiceInfo(engine, voice) {{
   const info = document.getElementById("voiceInfo");
@@ -502,7 +513,7 @@ async function pollJob(jobId) {{
       return;
     }}
     const meta = data.model ? `Modelo: ${{data.model}} | ${{Math.round((data.duration_ms || 0) / 100) / 10}}s` : `${{Math.round((data.duration_ms || 0) / 100) / 10}}s`;
-    add("ISIS", data.response || data.error || "", "isis", meta);
+    add("ISIS", data.response || data.error || "", "isis", meta, data.audio_url);
     setStatus(data.ok ? "Resposta concluida" : "Ocorreu um erro");
     if (data.ok) play(data.audio_url);
     else play(data.audio_url);
@@ -523,6 +534,7 @@ document.getElementById("voice").onclick = async () => {{
   const res = await fetch("/api/voice-test", {{ method:"POST" }});
   const data = await res.json();
   setStatus(data.ok ? "Voz local Piper acionada" : data.error);
+  if (data.ok) add("Voz", "Audio local Piper gerado.", "isis", "Clique no player se o navegador bloquear autoplay", data.audio_url);
   play(data.audio_url);
 }};
 document.getElementById("voiceDiag").onclick = async () => {{

@@ -1416,3 +1416,27 @@ Validacao:
 - HTML servido: `speechSynthesis=false`, `SpeechSynthesisUtterance=false`, `Microsoft Maria=false`, `VOZ LOCAL=true`.
 - `/api/voice-test`: WAV local gerado.
 - `python -m pytest -q --basetemp .tmp\pytest-full-local-voice`: 175 passed.
+
+## 2026-07-29 - Player para audio local no HUD
+
+Diagnostico:
+
+- Usuario informou que nao saia voz.
+- O HUD mostrava `Audio gerado; autoplay bloqueado pelo navegador`.
+- Piper gerava WAV corretamente, mas o navegador bloqueava `Audio.play()` automatico.
+
+Alteracoes:
+
+- Adicionado `audio controls` em respostas da ISIS quando `audio_url` existe.
+- Botao `VOZ LOCAL` adiciona uma bolha com player do WAV local.
+- Mensagem de bloqueio agora orienta clicar no player da mensagem.
+
+Validacao:
+
+- `python -m py_compile aurora\ui\hud_web.py`.
+- `python -m pytest tests\test_phase48_operational_hud.py tests\test_phase47_voice_hud.py -q --basetemp .tmp\pytest-audio-player`: 6 passed.
+- `python -m aurora.cli voice-test "ISIS usando player local."`: `engine=piper`, `voice=dii_pt-BR`.
+- HUD reiniciado em `http://127.0.0.1:8765/`.
+- HTML servido: `audio.controls=true`, `local-audio=true`, `speechSynthesis=false`.
+- `/api/voice-test`: WAV local retornado.
+- `python -m pytest -q --basetemp .tmp\pytest-full-audio-player`: 175 passed.

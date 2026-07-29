@@ -90,6 +90,12 @@
 - Causa: o HUD priorizava `speechSynthesis` e selecionava `Microsoft Maria - Portuguese (Brazil)`.
 - Solucao: remover TTS do navegador para respostas e testes; tocar somente o audio local gerado pelo Piper.
 
+## Audio local gerado mas sem som
+
+- Problema: o HUD indicava `Audio gerado; autoplay bloqueado pelo navegador` e nao saia voz automaticamente.
+- Causa: Chrome pode bloquear `Audio.play()` apos retorno assincrono do servidor.
+- Solucao: anexar um player `audio controls` em cada resposta/teste com WAV local para o usuario tocar manualmente quando autoplay for bloqueado.
+
 ## Pesquisa sem fonte parseavel no DuckDuckGo HTML
 
 - Problema: a pesquisa real retornou HTML, mas sem resultados extraidos pelo parser DuckDuckGo neste ambiente.
